@@ -1,0 +1,17 @@
+@mixin customButton {
+  background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: .8s;
+  width: 250px;
+
+  @media screen and (max-width: 768px) {
+    width: 180px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

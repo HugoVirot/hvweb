@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Exo+2:wght@400;500&display=swap");
+.alegreya-sans-sc-regular {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alegreya-sans-sc-medium {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.alegreya-sans-sc-bold {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+button {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+}
+button:hover {
+  background: #233E7B;
+  transform: scale(1.2);
+  transition: 0.8s;
+}
+
+p {
+  font-size: 1rem;
+  color: #233E7B;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #233E7B;
+  margin: 0;
+  padding: 0;
+}
+body header img {
+  width: 100px;
+  height: auto;
+}
+body header .navbar-expand-lg {
+  background-color: transparent !important;
+  background: none !important;
+}
+body main img {
+  border: 3px solid #233E7B;
+  border-radius: 10px;
+}
+body main #hero {
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #cfdba3, #f5d77c);
+  text-align: center;
+  padding: 50px 20px;
+}
+body main #hero button {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+}
+body main #hero button:hover {
+  background: #233E7B;
+  transform: scale(1.2);
+  transition: 0.8s;
+}
+body main #hero p {
+  font-size: 1.3rem !important;
+  color: white;
+}
+body main #hero #logo {
+  width: 300px;
+  height: auto;
+  border: none;
+}
+body main #hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+body main #hero p {
+  font-size: 1rem;
+}
+body main #hero .container.overflow-hidden {
+  overflow: hidden;
+}
+body main #hero .scroll-track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: scroll-left 12s linear infinite;
+}
+body main #hero .scroll-track i {
+  margin: 0 15px;
+  /* espace entre les icônes */
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+    /* défile la moitié du contenu dupliqué */
+  }
+}
+body main #agence h2 {
+  font-size: 2rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-bottom: 2px solid #233E7B;
+}
+body main #agence i {
+  color: #F2D38B;
+}
+body main #agence #paragraphe1 {
+  font-size: 20px;
+}
+body main #agence #paragraphe2 {
+  font-size: 18px;
+}
+body main #agence button {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+}
+body main #agence button:hover {
+  background: #233E7B;
+  transform: scale(1.2);
+  transition: 0.8s;
+}
+body main #services h2 {
+  font-size: 2rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-bottom: 2px solid #233E7B;
+}
+body main #services h3 {
+  font-size: 1.5rem;
+}
+body main #services .carousel-caption {
+  background-color: #233E7B;
+  border-radius: 20px;
+  color: white;
+  padding: 20px;
+}
+body main #services .carousel-caption p {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,637 @@
+@import "variables";
+@import "mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Exo+2:wght@400;500&display=swap");
+
+// ************** règles générales **************
+.alegreya-sans-sc-regular {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alegreya-sans-sc-medium {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.alegreya-sans-sc-bold {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.custom-btn {
+  @include customButton;
+}
+
+section {
+  scroll-margin-top: 100px; // hauteur de ta navbar
+}
+
+h2 {
+  font-size: $subtitleSize;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-bottom: 1px solid $mainBlue;
+
+  i {
+    color: $mainYellow;
+    font-size: 40px
+  }
+}
+
+h3 {
+  font-size: $h3size;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-size: $paragraphSize;
+  color: $mainBlue;
+}
+
+// effet d'apparition (combiné au script js)
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: $mainBlue;
+  margin: 0;
+  padding: 0;
+
+  header {
+    img {
+      width: 100px;
+      height: auto;
+    }
+
+    nav {
+      z-index: 1;
+      border-bottom: 1px solid $mainBlue;
+
+      button {
+        width: auto !important
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+
+      background: #0b1d3a; // ton bleu foncé si tu veux
+      padding: 1rem 0;
+
+      .nav-link {
+        color: black;
+        padding: .5rem 1rem;
+        position: relative;
+        transition: color .3s;
+
+        @media screen and (max-width: 768px) {
+          letter-spacing: 10px;
+        }
+
+        // soulignement animé
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 3px;
+          background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
+          transition: width .3s ease;
+        }
+
+        &:hover {
+          color: $mainYellow;
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &.active {
+          color: $mainYellow;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+
+      // bouton hamburger
+      .navbar-toggler {
+        border: none;
+        outline: none;
+        box-shadow: none !important;
+
+        &:focus {
+          box-shadow: none !important;
+        }
+
+        .navbar-toggler-icon {
+          filter: brightness(0) invert(1); // icône blanche
+        }
+      }
+    }
+
+
+    // .navbar-expand-lg {
+    //   background-color: transparent !important;
+    //   background: none !important;
+    // }
+  }
+
+  main {
+    img {
+      border: 3px solid $mainBlue;
+      border-radius: 10px;
+    }
+
+    #hero {
+      color: white;
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(45deg,
+          #0b1d3a,
+          #1e4d6e,
+          #3a8ca3,
+          #f5d77c);
+      //       background: linear-gradient(45deg,
+      // #0b1d3a,
+      // #1e4d6e,
+      // #3a8ca3,
+      // #cfdba3,
+      // #f5d77c);
+      text-align: center;
+      padding: 50px 20px;
+
+      // effet saisie h1
+      .typing-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        /* largeur max du bloc */
+        margin: auto;
+        /* centre le bloc */
+        text-align: center;
+        height: 3rem;
+        /* fixe la hauteur du h1 pour éviter tout décalage */
+
+        @media screen and (max-width: 768px) {
+          height: 8rem;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .typing {
+        position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #fff;
+        /* curseur */
+        animation: blink 0.7s infinite;
+
+        @media screen and (max-width: 768px) {
+          white-space: inherit;
+          border-right: none;
+          animation: none;
+        }
+      }
+
+      .ghost {
+        visibility: hidden;
+        white-space: nowrap;
+        display: block;
+      }
+
+      /* Curseur clignotant */
+      @keyframes blink {
+        0% {
+          border-color: transparent;
+        }
+
+        50% {
+          border-color: white;
+        }
+
+        100% {
+          border-color: transparent;
+        }
+      }
+
+      .services {
+        font-size: 1.1rem;
+        font-family: "Inter", sans-serif;
+        line-height: 1.8;
+        list-style: none;
+        padding: 0;
+      }
+
+      .services li {
+        margin-bottom: 0.6rem;
+      }
+
+      button {
+        @include customButton;
+        width: 250px;
+
+        @media screen and (max-width: 768px) {
+          width: 180px;
+        }
+      }
+
+      p,
+      ul {
+        font-size: 1.3rem !important;
+        color: white;
+      }
+
+      #logo {
+        width: 290px;
+        height: auto;
+        border: none;
+      }
+
+      h1 {
+        font-size: $titleSize;
+        margin-bottom: 20px;
+        font-family: "Alegreya Sans SC", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+
+        @media screen and (max-width: 768px) {
+          font-size: 3rem;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 3.5rem;
+        }
+      }
+
+      #votreAgence {
+        font-size: 24px !important;
+      }
+
+      p {
+        font-size: $paragraphSize;
+      }
+
+      // défilement icônes technos
+      .container.overflow-hidden {
+        overflow: hidden;
+      }
+
+      .scroll-track {
+        flex-wrap: nowrap;
+        gap: 30px;
+        width: max-content;
+        animation: scroll-left 10s linear infinite;
+
+        @media screen and (max-width: 768px) {
+          gap: 60px;
+          animation: scroll-left 10s linear infinite;
+        }
+      }
+
+      .scroll-track i {
+        flex-shrink: 0;
+      }
+
+      /* Animation fluide */
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+    }
+
+    //************ l'agence **************
+    #agence {
+      i {
+        color: $mainYellow;
+      }
+
+      img {
+        width: 55vw;
+        mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+
+        @media screen and (max-width: 768px) {
+          width: 90vw;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        p {
+          text-align: center;
+          line-height: 40px;
+        }
+      }
+
+      #paragraphe1 {
+        font-size: 20px;
+      }
+
+      #paragraphe2 {
+        font-size: 18px;
+      }
+
+      button {
+        @include customButton;
+
+      }
+    }
+
+    //************ services **************
+
+    #services {
+      ul {
+        font-size: 18px;
+      }
+
+      i {
+        color: $mainYellow;
+      }
+
+      /* Sélecteurs pour les flèches prev/next Bootstrap 5 */
+      .carousel-control-prev,
+      .carousel-control-next {
+        filter: none !important;
+        /* supprime toute transformation visuelle */
+        background-color: transparent !important;
+        /* supprime couleur de fond hover */
+      }
+
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover,
+      .carousel-control-prev:focus,
+      .carousel-control-next:focus {
+        background-color: transparent !important;
+        /* désactive le hover */
+        box-shadow: none !important;
+        /* supprime ombre */
+        transform: none !important;
+        /* supprime zoom ou déplacement */
+      }
+
+      .carousel-caption {
+        background: linear-gradient(45deg,
+            #0b1d3a,
+            #1e4d6e,
+            #3a8ca3,
+            #f5d77c) !important;
+      }
+
+      @media screen and (max-width: 768px) {
+
+        h3 {
+          font-size: 20px;
+        }
+
+        ul {
+          margin-bottom: 5px;
+          font-size: 13px;
+        }
+
+        /* Le carousel occupe la largeur dispo, pas besoin de toucher à la hauteur globale */
+        #carouselExampleCaptions .carousel-item {
+          position: relative;
+        }
+
+        #carouselExampleCaptions .carousel-item img {
+          width: 100%;
+          /* Format portrait simulé + crop */
+          aspect-ratio: 3 / 4; // ajuste si tu veux (2/3, 9/16, etc.)
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+
+        #carouselExampleCaptions .carousel-caption {
+          position: absolute;
+          left: 20px;
+          right: 20px;
+          padding: 10px 30px;
+
+          /* On se cale sur le tiers bas de l'image */
+          bottom: 20px;
+          height: auto; // ~ tiers bas
+          border-radius: 20px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          text-align: center; // ou center selon ton design
+        }
+
+        #carouselExampleCaptions .carousel-caption h5,
+        #carouselExampleCaptions .carousel-caption p {
+          margin: 0;
+        }
+      }
+
+      p {
+        color: white;
+      }
+    }
+
+    //******* offres / packs **********
+
+    #offres {
+      .pack {
+        background: linear-gradient(45deg,
+            #0b1d3a,
+            #1e4d6e,
+            #3a8ca3,
+            #f5d77c);
+        color: white;
+        border-radius: 20px;
+      }
+
+      h3 {
+        font-size: 2.2rem;
+      }
+
+      ul {
+        line-height: 35px;
+      }
+
+      .hr-white {
+        border: none;
+        height: 1px;
+        /* épaisseur */
+        background-color: #fff;
+        opacity: 1;
+        /* important avec Bootstrap */
+        margin: 20px 0;
+        /* espace autour */
+      }
+
+      ul {
+        font-size: 18px;
+        color: $mainBlue
+      }
+
+      .btn-devis-offre {
+        background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
+        color: white;
+        font-family: "Alegreya Sans SC", sans-serif;
+        font-weight: 700;
+        border: 2px solid white;
+        transition: .8s;
+      }
+
+      .btn-special {
+        color: #fff;
+        border: 2px solid #fff;
+        font-size: 20px;
+        width: 100%;
+        transform: none !important;
+      }
+
+      .technosPacks i {
+        color: $mainYellow
+      }
+
+      #avantages {
+        border: 2px solid $mainBlue;
+        border-radius: 20px;
+        background-color: rgb(238, 238, 238);
+
+        i {
+          background: linear-gradient(45deg,
+              #1e4d6e,
+              #3a8ca3,
+              #f5d77c);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+        }
+
+        h3,
+        h4 {
+          color: $mainBlue
+        }
+
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    //******* valeurs **********
+
+    #valeurs {
+      h3 {
+        background: linear-gradient(45deg,
+            #0b1d3a,
+            #1e4d6e,
+            #3a8ca3,
+            #f5d77c);
+        color: white;
+        border-radius: 10px;
+        border: 1px solid white;
+        width: 25vw;
+        margin: auto;
+
+        @media screen and (max-width: 768px) {
+          width: 70vw
+        }
+      }
+
+      .zone {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        cursor: pointer;
+        height: 50vh;
+        border: 1px solid $mainBlue;
+
+        .overlay,
+        .texte {
+          position: absolute;
+          inset: 0;
+          transition: 0.5s ease;
+        }
+
+        .overlay {
+          background-color: rgba(11, 29, 58, 0);
+        }
+
+        .texte {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          opacity: 0;
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin: 30px
+        }
+
+        &:hover .overlay {
+          background-color: rgba(11, 29, 58, 0.7);
+        }
+
+        &:hover .texte {
+          opacity: 1;
+        }
+      }
+
+      #zone1 {
+        background-image: url('../images/poignee_mains.jpg');
+        position: relative;
+      }
+
+      #zone2 {
+        background-image: url('../images/conference.jpg');
+      }
+
+      #zone3 {
+        background-image: url('../images/montre_connectee.jpg');
+      }
+
+      #zone4 {
+        background-image: url('../images/pouce_leve.jpg');
+      }
+
+      #zone5 {
+        background-image: url('../images/ordinateur.jpg');
+      }
+
+      #zone6 {
+        background-image: url('../images/performance.jpg');
+      }
+    }
+  }
+}

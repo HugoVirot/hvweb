@@ -1,0 +1,549 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Exo+2:wght@400;500&display=swap");
+.alegreya-sans-sc-regular {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alegreya-sans-sc-medium {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.alegreya-sans-sc-bold {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.custom-btn {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  .custom-btn {
+    width: 180px;
+  }
+}
+.custom-btn:hover {
+  transform: scale(1.2);
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-bottom: 1px solid #233E7B;
+}
+h2 i {
+  color: #F2D38B;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-size: 1rem;
+  color: #233E7B;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #233E7B;
+  margin: 0;
+  padding: 0;
+}
+body header img {
+  width: 100px;
+  height: auto;
+}
+body header nav {
+  z-index: 1;
+  border-bottom: 1px solid #233E7B;
+  background: #0b1d3a;
+  padding: 1rem 0;
+}
+body header nav button {
+  width: auto !important;
+}
+body header nav .navbar-toggler:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+body header nav .nav-link {
+  color: black;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+@media screen and (max-width: 768px) {
+  body header nav .nav-link {
+    letter-spacing: 10px;
+  }
+}
+body header nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  transition: width 0.3s ease;
+}
+body header nav .nav-link:hover {
+  color: #F2D38B;
+}
+body header nav .nav-link:hover::after {
+  width: 100%;
+}
+body header nav .nav-link.active {
+  color: #F2D38B;
+}
+body header nav .nav-link.active::after {
+  width: 100%;
+}
+body header nav .navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+}
+body header nav .navbar-toggler:focus {
+  box-shadow: none !important;
+}
+body header nav .navbar-toggler .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+body main img {
+  border: 3px solid #233E7B;
+  border-radius: 10px;
+}
+body main #hero {
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+  text-align: center;
+  padding: 50px 20px;
+  /* Curseur clignotant */
+  /* Animation fluide */
+}
+body main #hero .typing-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  /* largeur max du bloc */
+  margin: auto;
+  /* centre le bloc */
+  text-align: center;
+  height: 3rem;
+  /* fixe la hauteur du h1 pour éviter tout décalage */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  body main #hero .typing-wrapper {
+    height: 8rem;
+  }
+}
+body main #hero .typing {
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  /* curseur */
+  animation: blink 0.7s infinite;
+}
+@media screen and (max-width: 768px) {
+  body main #hero .typing {
+    white-space: inherit;
+    border-right: none;
+    animation: none;
+  }
+}
+body main #hero .ghost {
+  visibility: hidden;
+  white-space: nowrap;
+  display: block;
+}
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+body main #hero .services {
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.8;
+  list-style: none;
+  padding: 0;
+}
+body main #hero .services li {
+  margin-bottom: 0.6rem;
+}
+body main #hero button {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  body main #hero button {
+    width: 180px;
+  }
+}
+body main #hero button:hover {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 768px) {
+  body main #hero button {
+    width: 180px;
+  }
+}
+body main #hero p,
+body main #hero ul {
+  font-size: 1.3rem !important;
+  color: white;
+}
+body main #hero #logo {
+  width: 290px;
+  height: auto;
+  border: none;
+}
+body main #hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@media screen and (max-width: 768px) {
+  body main #hero h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body main #hero h1 {
+    font-size: 3.5rem;
+  }
+}
+body main #hero #votreAgence {
+  font-size: 24px !important;
+}
+body main #hero p {
+  font-size: 1rem;
+}
+body main #hero .container.overflow-hidden {
+  overflow: hidden;
+}
+body main #hero .scroll-track {
+  flex-wrap: nowrap;
+  gap: 30px;
+  width: -moz-max-content;
+  width: max-content;
+  animation: scroll-left 10s linear infinite;
+}
+@media screen and (max-width: 768px) {
+  body main #hero .scroll-track {
+    gap: 60px;
+    animation: scroll-left 10s linear infinite;
+  }
+}
+body main #hero .scroll-track i {
+  flex-shrink: 0;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+body main #agence i {
+  color: #F2D38B;
+}
+body main #agence img {
+  width: 55vw;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+@media screen and (max-width: 768px) {
+  body main #agence img {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main #agence p {
+    text-align: center;
+    line-height: 40px;
+  }
+}
+body main #agence #paragraphe1 {
+  font-size: 20px;
+}
+body main #agence #paragraphe2 {
+  font-size: 18px;
+}
+body main #agence button {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  body main #agence button {
+    width: 180px;
+  }
+}
+body main #agence button:hover {
+  transform: scale(1.2);
+}
+body main #services {
+  /* Sélecteurs pour les flèches prev/next Bootstrap 5 */
+}
+body main #services ul {
+  font-size: 18px;
+}
+body main #services i {
+  color: #F2D38B;
+}
+body main #services .carousel-control-prev,
+body main #services .carousel-control-next {
+  filter: none !important;
+  /* supprime toute transformation visuelle */
+  background-color: transparent !important;
+  /* supprime couleur de fond hover */
+}
+body main #services .carousel-control-prev:hover,
+body main #services .carousel-control-next:hover,
+body main #services .carousel-control-prev:focus,
+body main #services .carousel-control-next:focus {
+  background-color: transparent !important;
+  /* désactive le hover */
+  box-shadow: none !important;
+  /* supprime ombre */
+  transform: none !important;
+  /* supprime zoom ou déplacement */
+}
+body main #services .carousel-caption {
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c) !important;
+}
+@media screen and (max-width: 768px) {
+  body main #services {
+    /* Le carousel occupe la largeur dispo, pas besoin de toucher à la hauteur globale */
+  }
+  body main #services h3 {
+    font-size: 20px;
+  }
+  body main #services ul {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  body main #services #carouselExampleCaptions .carousel-item {
+    position: relative;
+  }
+  body main #services #carouselExampleCaptions .carousel-item img {
+    width: 100%;
+    /* Format portrait simulé + crop */
+    aspect-ratio: 3/4;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    display: block;
+  }
+  body main #services #carouselExampleCaptions .carousel-caption {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    padding: 10px 30px;
+    /* On se cale sur le tiers bas de l'image */
+    bottom: 20px;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  body main #services #carouselExampleCaptions .carousel-caption h5,
+  body main #services #carouselExampleCaptions .carousel-caption p {
+    margin: 0;
+  }
+}
+body main #services p {
+  color: white;
+}
+body main #offres .pack {
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+  color: white;
+  border-radius: 20px;
+}
+body main #offres h3 {
+  font-size: 2.2rem;
+}
+body main #offres ul {
+  line-height: 35px;
+}
+body main #offres .hr-white {
+  border: none;
+  height: 1px;
+  /* épaisseur */
+  background-color: #fff;
+  opacity: 1;
+  /* important avec Bootstrap */
+  margin: 20px 0;
+  /* espace autour */
+}
+body main #offres ul {
+  font-size: 18px;
+  color: #233E7B;
+}
+body main #offres .btn-devis-offre {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+}
+body main #offres .btn-special {
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 20px;
+  width: 100%;
+  transform: none !important;
+}
+body main #offres .technosPacks i {
+  color: #F2D38B;
+}
+body main #offres #avantages {
+  border: 2px solid #233E7B;
+  border-radius: 20px;
+  background-color: rgb(238, 238, 238);
+}
+body main #offres #avantages i {
+  background: linear-gradient(45deg, #1e4d6e, #3a8ca3, #f5d77c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+body main #offres #avantages h3,
+body main #offres #avantages h4 {
+  color: #233E7B;
+}
+body main #offres #avantages h4 {
+  font-size: 20px;
+}
+body main #valeurs h3 {
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 25vw;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  body main #valeurs h3 {
+    width: 70vw;
+  }
+}
+body main #valeurs .zone {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  height: 50vh;
+  border: 1px solid #233E7B;
+}
+body main #valeurs .zone .overlay,
+body main #valeurs .zone .texte {
+  position: absolute;
+  inset: 0;
+  transition: 0.5s ease;
+}
+body main #valeurs .zone .overlay {
+  background-color: rgba(11, 29, 58, 0);
+}
+body main #valeurs .zone .texte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 30px;
+}
+body main #valeurs .zone:hover .overlay {
+  background-color: rgba(11, 29, 58, 0.7);
+}
+body main #valeurs .zone:hover .texte {
+  opacity: 1;
+}
+body main #valeurs #zone1 {
+  background-image: url("../images/poignee_mains.jpg");
+  position: relative;
+}
+body main #valeurs #zone2 {
+  background-image: url("../images/conference.jpg");
+}
+body main #valeurs #zone3 {
+  background-image: url("../images/montre_connectee.jpg");
+}
+body main #valeurs #zone4 {
+  background-image: url("../images/pouce_leve.jpg");
+}
+body main #valeurs #zone5 {
+  background-image: url("../images/ordinateur.jpg");
+}
+body main #valeurs #zone6 {
+  background-image: url("../images/performance.jpg");
+}/*# sourceMappingURL=style.css.map */

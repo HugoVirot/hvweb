@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HV Web, votre agence digitale</title>
+  <link rel="icon" type="image/png" href="./images/favicon_hvweb.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/6259f9b52f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./images/logo_hvweb.png" /></a>
+        <button class="navbar-toggler custom-btn" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse mx-auto mb-2" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item mx-md-4">
+              <a class="nav-link" href="#agence">L'AGENCE</a>
+            </li>
+            <li class="nav-item mx-md-4">
+              <a class="nav-link" href="#services">SERVICES</a>
+            </li>
+            <li class="nav-item mx-md-4">
+              <a class="nav-link" href="#offres">OFFRES</a>
+            </li>
+            <li class="nav-item mx-md-4">
+              <a class="nav-link" href="#valeurs">VALEURS</a>
+            </li>
+            <li class="nav-item mx-md-4">
+              <a class="nav-link" href="#realisations">REALISATIONS</a>
+            </li>
+            <li class="nav-item mx-md-4">
+              <a class="nav-link" href="#apropos">A PROPOS</a>
+            </li>
+            <li class="nav-item mx-md-4">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!---------------------------------- HERO ------------------------------->
+    <section id="hero" class="px-5 text-center">
+
+      <img src="images/logo_hvweb.png" alt="Logo HV Web" id="logo" class="mx-auto d-block" />
+
+      <h1 class="my-5 typing-wrapper">
+        <span class="typing"></span>
+        <span class="ghost">L’innovation au service de votre image</span>
+      </h1>
+
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <p class="fw-bold animate-on-scroll" id="votreAgence">
+            <i class="fa-solid fa-laptop me-2"></i>
+            HV Web, votre Agence Digitale 100% en ligne basée à Niort !
+            <!-- <i class="fa-solid fa-laptop"></i> -->
+          </p>
+
+          <div class="row animate-on-scroll">
+            <ul class="list-unstyled text-start col-md-9 offset-md-2 servicesHero">
+              <li>→ Applications web PHP & JavaScript (Laravel + Vue / React)
+              <li>→ Boutiques en ligne, plateformes d'entreprise, sites vitrines </li>
+              <!-- <li>→ Formations numériques (technologies variées)</li> -->
+              </li>
+            </ul>
+            <ul class="servicesHero typing-list" aria-hidden="true"></ul>
+          </div>
+          <p class="fw-bold animate-on-scroll">
+            <i class="fa-solid fa-rocket me-2"></i>
+            Construisons ensemble votre univers digital sur-mesure !
+            <!-- <i class="fa-solid fa-rocket"></i> -->
+          </p>
+        </div>
+      </div>
+      <div class="container overflow-hidden">
+        <div class="scroll-track d-flex py-4 px-md-5 mb-3 mx-md-5">
+          <i class="fa-brands fa-php col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-laravel col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-js col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-vuejs col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-react col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-bootstrap col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-html5 col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-css3-alt col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-cc-stripe col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-github col-md-2 fa-3x"></i>
+
+          <!-- Duplication pour l'effet infini -->
+          <i class="fa-brands fa-php col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-laravel col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-js col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-vuejs col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-react col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-bootstrap col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-html5 col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-css3-alt col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-cc-stripe col-md-2 fa-3x"></i>
+          <i class="fa-brands fa-github col-md-2 fa-3x"></i>
+        </div>
+      </div>
+
+      <button class="btn btn-lg custom-btn">Nos services</button>
+      <button class="btn btn-lg custom-btn">Devis gratuit</button>
+    </section>
+
+    <!---------------------------------- L'AGENCE ------------------------------->
+
+    <section id="agence" class="container-fluid text-center">
+      <h2 class="animate-on-scroll my-5 w-50 mx-auto d-flex align-items-center justify-content-center pb-3">
+        <i class="animate-on-scroll fa-solid fa-laptop-code me-3"></i>
+        L'AGENCE
+      </h2>
+
+      <img src="./images/terre.jpg" alt="agence hv web" class="mx-auto animate-on-scroll fade-bottom" />
+
+      <div class="container-md m-5 text-start mx-auto">
+        <div class="row px-4 px-md-5">
+          <div class="col-md-2 text-center my-4">
+            <i class="fa-solid fa-handshake fa-3x animate-on-scroll"></i>
+          </div>
+          <div class="col-md-10 my-4">
+            <p class="fw-bold animate-on-scroll" id="paragraphe1">
+              HV Web, votre agence digitale 100% en ligne basée à Niort
+              (Nouvelle Aquitaine), vous accompagne dans la création de
+              solutions web performantes, évolutives et pensées pour vous.
+            </p>
+          </div>
+          <div class="col-md-2 text-center my-4">
+            <i class="fa-solid fa-code fa-3x animate-on-scroll"></i>
+          </div>
+          <div class="col-md-10 my-4">
+            <p class="fw-bold animate-on-scroll" id="paragraphe2">
+              Spécialistes des technologies PHP (Laravel) et JavaScript (Vue /
+              React), nous concevons des sites web dynamiques, des sites vitrines et intervenons
+              sur des projets existants.
+            </p>
+          </div>
+          <div class="col-md-2 text-center my-4">
+            <i class="fa-solid fa-rocket fa-3x animate-on-scroll"></i>
+          </div>
+          <div class="col-md-10 my-4">
+            <p class="animate-on-scroll">
+              <span class="fw-bold">Nous allions expertise technique, design sur-mesure et
+                approche humaine</span>
+              pour donner vie à vos idées.
+            </p>
+          </div>
+          <div class="col-md-2 text-center my-4">
+            <i class="fa-solid fa-seedling fa-3x animate-on-scroll"></i>
+          </div>
+          <div class="col-md-10 my-4">
+            <p class="animate-on-scroll">
+              <span class="fw-bold">Nous intégrons l’éco-conception dans nos projets</span>
+              : des sites plus légers, moins énergivores et respectueux de
+              l’environnement.
+            </p>
+          </div>
+          <div class="col-md-2 text-center my-4">
+            <i class="fa-solid fa-comment fa-3x animate-on-scroll"></i>
+          </div>
+          <div class="col-md-10 my-4">
+            <p class="animate-on-scroll">
+              <span class="fw-bold">Contactez-nous pour un devis gratuit</span>
+              ou toute demande d’information.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-3 mb-5 mx-auto text-center animate-on-scroll">
+          <div class="col-sm-6 text-sm-end">
+            <button class="btn btn-lg custom-btn animate-on-scroll">Contact</button>
+          </div>
+          <div class="col-sm-6 text-sm-start">
+            <button class="btn btn-lg custom-btn animate-on-scroll">Devis gratuit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------- SERVICES ------------------------------->
+
+    <section id="services" class="mt-4 pt-1">
+      <h2 class="my-5 w-50 mx-auto d-flex align-items-center justify-content-center pb-3 animate-on-scroll">
+        <i class="fa-solid fa-laptop-code me-3 animate-on-scroll"></i>
+        NOS SERVICES
+      </h2>
+
+      <div id="carouselExampleCaptions" class="carousel slide container-md animate-on-scroll" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="./images/ordinateurs.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption animate-on-scroll">
+              <h3>Développement d’applications web <span class="d-none d-sm-block">sur mesure</span></h3>
+              <div class="row">
+                <ul class="text-start ps-md-5 col-md-6">
+                  <li>Applications modernes en PHP / JavaScript</li>
+                  <li>Stack Laravel + React ou Vue.js</li>
+                </ul>
+                <ul class="text-start ps-md-4 col-md-6">
+                  <li>Interface administrable, évolutive et intuitive</li>
+                  <li>Performance, sécurité et maintenance optimisées</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item"> <img src="./images/e-commerce.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption animate-on-scroll">
+              <h3>Création de sites e‑commerce</h3>
+              <div class="row">
+                <ul class="text-start ps-md-5 col-md-6">
+                  <li>Conception complète de boutiques en ligne</li>
+                  <li>Gestion des produits, commandes et paiements</li>
+                </ul>
+                <ul class="text-start ps-md-4 col-md-6">
+                  <li>Intégration d’outils marketing et SEO (statistiques, emailing, suivi publicitaire)</li>
+                  <li>Accompagnement et conseils personnalisés</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/ordinateur_portable.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption animate-on-scroll">
+              <h3>Création de sites vitrines</h3>
+              <div class="row">
+                <ul class="text-start ps-md-5 col-md-6">
+                  <li>Site codé sur-mesure en HTML / CSS</li>
+                  <li>Refonte possible d’un site existant</li>
+                </ul>
+                <ul class="text-start ps-md-4 col-md-6">
+                  <li>Maquettage et création de logo inclus</li>
+                  <li>Optimisation du référencement</li>
+                </ul>
+              </div>
+              <ul class="text-start ps-5">
+              </ul>
+            </div>
+          </div>
+
+          <!-- <div class="carousel-item">
+            <img src="./images/formation.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption animate-on-scroll">
+              <h3>Formations dans le numérique</h3>
+              <div class="row">
+                <ul class="text-start ps-md-5 col-md-6">
+                  <li>Toutes durées, en présentiel ou distanciel</li>
+                  <li>4 ans d’expérience en tant que formateur</li>
+                </ul>
+                <ul class="text-start ps-md-4 col-md-6">
+                  <li>Technologies et outils variés (liste dans la section Offres)</li>
+                  <li>Supports pédagogiques PDF inclus</li>
+                </ul>
+              </div>
+              <ul class="text-start ps-5">
+              </ul>
+            </div>
+          </div> -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!---------------------------------- OFFRES ------------------------------->
+
+    <section id="offres" class="mt-4 pt-1 px-3">
+      <h2 class="my-5 w-50 mx-auto d-flex align-items-center justify-content-center pb-3  animate-on-scroll">
+        <i class="fa-solid fa-wand-magic-sparkles me-3"></i>
+        NOS OFFRES
+      </h2>
+
+      <!-- pack site vitrine -->
+      <div class="container pack p-4 animate-on-scroll">
+        <h3 class="text-center"><i class="fas fa-star me-3"></i>Pack site vitrine <span class="fs-4">→ dès 900€
+            TTC</span></h3>
+        <hr class="hr-white">
+        <div class="accordion" id="detailsPack1">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <button class="accordion-button btn-special custom-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Voir les détails
+              </button>
+            </div>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#detailsPack1">
+              <div class="accordion-body">
+                <div class="row ps-2 ps-md-4">
+                  <ul class="feature-list list-unstyled col-md-6">
+                    <li><span class="fw-bold">✓ Votre site codé sur-mesure</span> (HTML / CSS)</li>
+                    <li><span class="fw-bold">✓ 1 à 5 pages</span> selon vos besoins</li>
+                    <li><span class="fw-bold">✓ Design personnalisé</span> et maquettage (Figma)</li>
+                    <li><span class="fw-bold">✓ Responsive</span> : adapté à tous les écrans</li>
+                    <li><span class="fw-bold">✓ Sécurité HTTPS</span> (certificat SSL/TLS inclus)</li>
+                  </ul>
+                  <ul class="feature-list list-unstyled col-12 col-md-6">
+                    <li><span class="fw-bold">✓ Formulaire de contact</span> intégré</li>
+                    <li><span class="fw-bold">✓ Cahier des charges</span> rédigé ensemble</li>
+                    <li><span class="fw-bold">✓ Création de logo</span> ou utilisation logo existant</li>
+                    <li><span class="fw-bold">✓ SEO optimisé</span> (référencement Google)</li>
+                  </ul>
+                </div>
+
+                <div class="mx-auto text-center technosPacks">
+                  <p class="fs-5 fw-bold">Technologies utilisées</p>
+                  <div class="row mb-3">
+                    <div class="col-6 col-sm-4 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-html5 fa-2x me-2"></i> <span>HTML 5</span>
+                    </div>
+                    <div class="col-6 col-sm-4 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-css3-alt fa-2x me-2"></i> <span>CSS 3</span>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-3 mt-sm-0 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-bootstrap fa-2x me-2"></i> <span>Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-lg custom-btn btn-devis-offre text-center">Devis gratuit</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pack application web -->
+      <div class="container pack p-4 mt-5 animate-on-scroll">
+        <h3 class="text-center"><i class="fas fa-bolt me-3"></i>Pack application web <span class="fs-4">→ dès 3000€
+            TTC</span></h3>
+        <hr class="hr-white">
+        <div class="accordion" id="detailsPack2">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <button class="accordion-button btn-special custom-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                Voir les détails
+              </button>
+            </div>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#detailsPack2">
+              <div class="accordion-body">
+                <div class="row ps-2 ps-md-4">
+                  <ul class="feature-list list-unstyled col-12 col-md-6">
+                    <li><span class="fw-bold">✓ Développement sur mesure</span> (Laravel + React ou Vue.js)</li>
+                    <li><span class="fw-bold">✓ Pages administrables</span> : blog, espace client, formulaires…</li>
+                    <li><span class="fw-bold">✓ Sécurité renforcée</span> (CSRF, HTTPS, validation serveur)</li>
+                    <li><span class="fw-bold">✓ Responsive</span> : adapté à tous les écrans</li>
+                    <li><span class="fw-bold">✓ Base de données</span> MySQL mise en place</li>
+                  </ul>
+
+                  <ul class="feature-list list-unstyled col-12 col-md-6">
+                    <li><span class="fw-bold">✓ Cahier des charges</span> rédigé ensemble</li>
+                    <li><span class="fw-bold">✓ Maquettage préalable</span> sur Figma</li>
+                    <li><span class="fw-bold">✓ SEO optimisé</span> (référencement Google)</li>
+                    <li><span class="fw-bold">✓ Formation</span> à la prise en main du back-office</li>
+                  </ul>
+                </div>
+
+                <div class="mx-auto text-center technosPacks">
+                  <p class="fs-5 fw-bold">Technologies utilisées</p>
+                  <div class="row mb-md-4">
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-html5 fa-2x me-2"></i> <span>HTML 5</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-css3-alt fa-2x me-2"></i> <span>CSS 3</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-php fa-2x me-2"></i> <span>PHP</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-js fa-2x me-2"></i> <span>JavaScript</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-vuejs fa-2x me-2"></i> <span>Vue JS</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-react fa-2x me-2"></i> <span>React</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-bootstrap fa-2x me-2"></i> <span>Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-lg custom-btn btn-devis-offre mx-auto text-center">Devis gratuit</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- pack e-commerce -->
+      <div class="container pack p-4 mt-5 animate-on-scroll">
+        <h3 class="text-center"><i class="fas fa-cart-shopping me-3"></i>Pack E-commerce <span class="fs-4">→ dès 6000€
+            TTC</span></h3>
+        <hr class="hr-white">
+        <div class="accordion" id="detailsPack3">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <button class="accordion-button btn-special custom-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                Voir les détails
+              </button>
+            </div>
+            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#detailsPack3">
+              <div class="accordion-body">
+                <div class="row ps-2 ps-md-4">
+                  <ul class="feature-list list-unstyled col-12 col-md-6">
+                    <li><span class="fw-bold">✓ Site e‑commerce sur mesure</span> (Laravel + Vue)</li>
+                    <li><span class="fw-bold">✓ Gestion des produits</span>, gammes et <span
+                        class="fw-bold">commandes</span></li>
+                    <li><span class="fw-bold">✓ Paiements sécurisés</span> (Stripe, PayPal)</li>
+                    <li><span class="fw-bold">✓ Espace client</span> + suivi des commandes</li>
+                    <li><span class="fw-bold">✓ Parcours d’achat optimisé</span></li>
+                    <li><span class="fw-bold">✓ Accompagnement à la prise en main</span> (navigation et gestion du
+                      back‑office)</li>
+                  </ul>
+
+                  <ul class="feature-list list-unstyled col-12 col-md-6">
+                    <li><span class="fw-bold">✓ Responsive</span> : adapté à tous les écrans</li>
+                    <li><span class="fw-bold">✓ intégration CGV & mentions légales</span>, conformité <span
+                        class="fw-bold">RGPD</span></li>
+                    <li><span class="fw-bold">✓ SEO technique optimisé</span> (référencement naturel)</li>
+                    <li><span class="fw-bold">✓ Design personnalisé</span> + maquettes <span
+                        class="fw-bold">Figma</span></li>
+                    <li><span class="fw-bold">✓ Base de données</span> <span class="fw-bold">MySQL</span> mise en place
+                    </li>
+                    <li><span class="fw-bold">✓ Architecture évolutive</span> et scalable
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mx-auto text-center technosPacks">
+                  <p class="fs-5 fw-bold">Technologies utilisées</p>
+                  <div class="row mb-md-4">
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-html5 fa-2x me-2"></i> <span>HTML 5</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-css3-alt fa-2x me-2"></i> <span>CSS 3</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-php fa-2x me-2"></i> <span>PHP</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-js fa-2x me-2"></i> <span>JavaScript</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-vuejs fa-2x me-2"></i> <span>Vue JS</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-react fa-2x me-2"></i> <span>React</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-bootstrap fa-2x me-2"></i> <span>Bootstrap</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-cc-stripe fa-2x me-2"></i> <span>Stripe</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-lg custom-btn btn-devis-offre mx-auto text-center">Devis gratuit</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- pack formation -->
+      <!-- <div class="container pack p-4 mt-5 animate-on-scroll">
+        <h3 class="text-center"><i class="fa-solid fa-graduation-cap me-3"></i>Pack Formation<span class="fs-4">→ dès
+            75€ /
+            heure
+            TTC</span></h3>
+        <hr class="hr-white">
+        <div class="accordion" id="detailsPack4">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <button class="accordion-button btn-special custom-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                Voir les détails
+              </button>
+            </div>
+            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#detailsPack4">
+              <div class="accordion-body">
+
+                <div class="row ps-2 ps-md-4">
+                  <ul class="feature-list list-unstyled col-12 col-md-6">
+                    <li><span class="fw-bold">✓ Sessions personnalisées</span> (individuelles ou en groupe)</li>
+                    <li><span class="fw-bold">✓ Supports pédagogiques</span> fournis (PDF, exercices…)</li>
+                    <li><span class="fw-bold">✓ Durée flexible</span> : à la carte ou programme complet</li>
+                    <li>
+                      <span class="fw-bold">✓ En présentiel</span>
+                      (secteur <span class="fw-bold">Poitou-Charentes</span>, frais de déplacement à prévoir)
+                      ou <span class="fw-bold">à distance</span>
+                    </li>
+                  </ul>
+
+                  <ul class="feature-list list-unstyled col-12 col-md-6">
+                    <li><span class="fw-bold">✓ Approche pédagogique</span> claire et progressive</li>
+                    <li><span class="fw-bold">✓ Accompagnement</span> humain et bienveillant</li>
+                    <li><span class="fw-bold">✓ Attestation de formation</span> sur demande</li>
+                  </ul>
+                </div>
+
+                <div class="mx-auto text-center technosPacks">
+                  <p class="fs-5 fw-bold">Technologies et thèmes</p>
+
+                  <div class="row mb-md-4">
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-html5 fa-2x me-2"></i> <span>HTML 5</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-css3-alt fa-2x me-2"></i> <span>CSS 3</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-php fa-2x me-2"></i> <span>PHP</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-js fa-2x me-2"></i> <span>JavaScript</span>
+                    </div>
+                  </div>
+
+                  <div class="row mb-md-4">
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-vuejs fa-2x me-2"></i> <span>Vue JS</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-react fa-2x me-2"></i> <span>React</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-bootstrap fa-2x me-2"></i> <span>Bootstrap</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-java fa-2x me-2"></i> <span>Java</span>
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-solid fa-people-group fa-2x me-2"></i> <span>Agilité (Scrum)</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-solid fa-id-card fa-2x me-2"></i> <span>RGPD</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-github fa-2x me-2"></i> <span>Git & Github</span>
+                    </div>
+                    <div class="mb-3 mb-md-2 col-6 col-md-3 d-flex flex-row justify-content-center align-items-center">
+                      <i class="fa-brands fa-wordpress fa-2x me-2"></i> <span>Wordpress</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-lg custom-btn btn-devis-offre mx-auto text-center">Devis gratuit</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+      <!-- avantages des packs-->
+      <div class="container mt-5 animate-on-scroll px-5" id="avantages">
+        <h3 class="text-center my-auto"><i class="fa-solid fa-circle-check mt-5 me-2 animate-on-scroll"></i> Avantages
+          inclus dans
+          tous nos packs</h3>
+        <div class="row text-center animate-on-scroll my-5">
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-location-dot fa-4x mb-4"></i>
+            <h4>Hébergement sur serveurs français</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-code fa-4x mb-4"></i>
+            <h4>Développement sur-mesure</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-mobile-button fa-4x mb-4"></i>
+            <h4>Design 100% responsive</h4>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-user-shield fa-4x mb-4"></i>
+            <h4>Sécurité renforcée</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-gauge-simple-high fa-4x mb-4"></i>
+            <h4>Optimisation technique</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-scale-balanced fa-4x mb-4"></i>
+            <h4>Conformité RGPD et mentions légales</h4>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-person-chalkboard fa-4x mb-4"></i>
+            <h4>Formation à la
+              prise en main</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-screwdriver-wrench fa-4x mb-4"></i>
+            <h4>30 jours de maintenance offerts</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-home fa-4x mb-4"></i>
+            <h4>Hébergement et nom de domaine inclus</h4>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-circle-check fa-4x mb-4"></i>
+            <h4>Support réactif</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-solid fa-seedling fa-4x mb-4"></i>
+            <h4>Eco-conception</h4>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 animate-on-scroll">
+            <i class="fa-brands fa-google fa-4x mb-4"></i>
+            <h4>Référencement (SEO) optimisé</h4>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-lg custom-btn btn-devis-offre mt-5">Devis gratuit</button>
+      </div>
+
+
+    </section>
+
+    <!---------------------------------- VALEURS ------------------------------->
+
+    <section id="valeurs" class="mt-4 pt-1 animate-on-scroll">
+      <h2 class="my-5 w-50 mx-auto d-flex align-items-center justify-content-center pb-3 animate-on-scroll">
+        <i class="fa-solid fa-laptop-code me-3"></i>
+        NOS VALEURS
+      </h2>
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="animate-on-scroll zone col-md-6 images d-flex justify-content-center align-items-center"
+            id="zone1">
+            <div class="overlay"></div>
+            <p class="texte text-center">Construire une relation de confiance, écouter, comprendre les besoins réels et
+              accompagner
+              avec bienveillance.
+            </p>
+            <h3 class="px-5 py-2 text-center">L’humain avant tout</h3>
+          </div>
+
+          <div class="animate-on-scroll zone col-md-6 images d-flex justify-content-center align-items-center"
+            id="zone2">
+            <div class="overlay"></div>
+            <p class="texte text-center">Expliquer clairement, partager les choix techniques, donner de la visibilité
+              sur l’avancement et transmettre les clés pour rendre le client autonome.
+            </p>
+            <h3 class="px-5 py-2 text-center">Transparence</h3>
+          </div>
+
+          <div class="animate-on-scroll zone col-md-6 images d-flex justify-content-center align-items-center"
+            id="zone3">
+            <div class="overlay"></div>
+            <p class="texte text-center">Tenir les engagements, planifier avec rigueur et livrer dans les temps. La
+              fiabilité est notre marque de fabrique.
+            </p>
+            <h3 class="px-5 py-2 text-center">Respect des délais</h3>
+          </div>
+
+          <div class="animate-on-scroll zone col-md-6 images d-flex justify-content-center align-items-center"
+            id="zone4">
+            <div class="overlay"></div>
+            <p class="texte text-center">
+              - Développer des solutions faciles et agréables à utiliser, qui font gagner du temps et simplifient la
+              vie.<br>
+              - Rendre le web accessible, compréhensible et fluide. Pas de jargon inutile, pas de complexité superflue.
+            </p>
+            <h3 class="px-5 py-2 text-center">Simplicité</h3>
+          </div>
+
+          <div class="animate-on-scroll zone col-md-6 images d-flex justify-content-center align-items-center"
+            id="zone5">
+            <div class="overlay"></div>
+            <p class="texte text-center">
+              S’appuyer sur les technologies actuelles, les bonnes pratiques et une veille continue pour proposer des
+              solutions durables et élégantes.
+            </p>
+            <h3 class="px-5 py-2 text-center">Modernité</h3>
+          </div>
+
+          <div class="animate-on-scroll zone col-md-6 images d-flex justify-content-center align-items-center"
+            id="zone6">
+            <div class="overlay"></div>
+            <p class="texte text-center">
+              Optimiser chaque projet pour la rapidité, la stabilité et l’efficacité - du code à l’expérience
+              utilisateur.
+            </p>
+            <h3 class="px-5 py-2 text-center">Performance</h3>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!---------------------------------- REALISATIONS ------------------------------->
+
+    <section id="realisations" class="mt-4 pt-1">
+      <h2 class="my-5 w-50 mx-auto d-flex align-items-center justify-content-center pb-3">
+        <i class="fa-solid fa-laptop-code me-3"></i>
+        REALISATIONS
+      </h2>
+    </section>
+
+    <!---------------------------------- APROPOS ------------------------------->
+
+    <section id="apropos" class="mt-4 pt-1">
+      <h2 class="my-5 w-50 mx-auto d-flex align-items-center justify-content-center pb-3">
+        <i class="fa-solid fa-laptop-code me-3"></i>
+        A PROPOS
+      </h2>
+    </section>
+
+    <!---------------------------------- CONTACT ------------------------------->
+
+    <section id="contact" class="mt-4 pt-1">
+      <h2 class="my-5 w-50 mx-auto d-flex align-items-center justify-content-center pb-3">
+        <i class="fa-solid fa-laptop-code me-3"></i>
+        CONTACTEZ-NOUS
+      </h2>
+    </section>
+  </main>
+
+  <footer></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script>
+
+    // **************** navbar blanche si scroll ********************
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('nav');
+
+      if (window.scrollY > 380) {
+        navbar.classList.add('fixed-top');
+      } else {
+        navbar.classList.remove('fixed-top');
+      }
+    });
+
+    // function that triggers the counts
+    function animateValue(obj, start, end, duration) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.innerHTML = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    // listener on scroll event
+    window.onscroll = function () {
+      if (window.scrollY > 600 && window.scrollY < 700) {
+        // one function call for every number to animate
+        const anneesExp = document.getElementById("anneesExp");
+        animateValue(anneesExp, 0, 5, 1500);
+
+        const anneeEtudes = document.getElementById("anneeEtudes");
+        animateValue(anneeEtudes, 0, 4, 1500);
+
+        const technos = document.getElementById("technologies");
+        animateValue(technos, 0, 14, 1500);
+      }
+    };
+
+    // Select all <a> elements inside the offcanvas
+    // const links = document.querySelectorAll("nav a");
+
+    // Function to close the offcanvas menu
+    // function closeOffcanvas() {
+    //   const offcanvas = document.querySelector(".offcanvas");
+    //   const backdrop = document.querySelector(".offcanvas-backdrop");
+    //   offcanvas.classList.remove("show");
+    //   backdrop.classList.remove("show");
+    // }
+
+    // Add a click event listener to each <a> element
+    // links.forEach(function (link) {
+    //   link.addEventListener("click", closeOffcanvas);
+    // });
+
+    // Ceci est une fonction auto - exécutable.Les fonctions auto - exécutables
+    // sont des fonctions qui s'exécutent immédiatement après leur déclaration,
+    // sans avoir besoin d'être appelées.Les accolades immédiatement après la
+    // déclaration de la fonction et les parenthèses à la fin de la déclaration
+    // définissent la fonction et permettent de l'exécuter immédiatement.
+    (function () {
+      "use strict";
+
+      // Sélectionne tous les éléments à animer
+      const elements = document.querySelectorAll(".animate-on-scroll");
+
+      // Options de l'observer
+      const observerOptions = {
+        root: null, // viewport du navigateur
+        rootMargin: "0px", // marge autour du viewport
+        threshold: 0.1, // 10% de l'élément visible déclenche l'animation
+      };
+
+      // Callback quand un élément entre ou sort du viewport
+      const observerCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            // Pour n’animer qu’une seule fois, on peut désactiver l’observer sur cet élément
+            observer.unobserve(entry.target);
+          } else {
+            // Si tu veux que l'animation se répète à chaque scroll, commente la ligne ci-dessus
+            // entry.target.classList.remove("is-visible");
+          }
+        });
+      };
+
+      // Crée l'observer
+      const observer = new IntersectionObserver(
+        observerCallback,
+        observerOptions
+      );
+
+      // Observe chaque élément
+      elements.forEach((el) => observer.observe(el));
+    })();
+
+
+    // ***************************effet animation h1*******************************
+    const texts = ["Créateur d’expériences web", "L’innovation au service de votre image", "Simplicité, modernité, performance",];
+    let index = 0;
+    let char = 0;
+    let deleting = false;
+
+    const el = document.querySelector(".typing");
+
+    function type() {
+      const text = texts[index];
+      el.textContent = deleting ? text.slice(0, --char) : text.slice(0, ++char);
+      if (!deleting && char === text.length) {
+        setTimeout(() => deleting = true, 1200);
+      } else if (deleting && char === 0) {
+        deleting = false; index = (index + 1) % texts.length;
+      }
+      setTimeout(type, deleting ? 40 : 60);
+    }
+
+    type();
+
+    // replier navbar au clic sur un lien
+    const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // attendre 2 secondes avant de replier 
+        setTimeout(() => { new bootstrap.Collapse(navbarCollapse, { toggle: true }); }, 1000);
+      });
+    });
+
+  </script>
+</body>
+
+</html>
