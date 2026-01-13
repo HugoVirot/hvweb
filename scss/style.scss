@@ -26,6 +26,15 @@
   @include customButton;
 }
 
+.btn-devis-offre {
+  background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: .8s;
+}
+
 section {
   scroll-margin-top: 100px; // hauteur de ta navbar
 }
@@ -500,15 +509,6 @@ body {
         color: $mainBlue
       }
 
-      .btn-devis-offre {
-        background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
-        color: white;
-        font-family: "Alegreya Sans SC", sans-serif;
-        font-weight: 700;
-        border: 2px solid white;
-        transition: .8s;
-      }
-
       .btn-special {
         color: #fff;
         border: 2px solid #fff;
@@ -631,6 +631,99 @@ body {
 
       #zone6 {
         background-image: url('../images/performance.jpg');
+      }
+    }
+
+    // realisations
+
+    #realisations {
+
+      .modal {
+        height: auto;
+      }
+
+      img {
+        width: 95%;
+        transform: scale(1);
+        transition: 0.4s;
+        z-index: 0;
+        filter: none;
+        border: 2px solid $mainBlue;
+        border-radius: 10px;
+        width: 100%;
+        /* Format portrait simulé + crop */
+        aspect-ratio: 4/3; // ajuste si tu veux (2/3, 9/16, etc.)
+        object-fit: cover;
+        object-position: center;
+        display: block;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.6s;
+          z-index: 10;
+        }
+      }
+
+      h1 {
+        justify-content: center !important;
+        font-size: 2.6em;
+        font-family: "Alegreya Sans SC", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        border-bottom: 1px solid $mainBlue;
+
+        @media screen and (max-width: 767px) {
+          font-size: 1.4em;
+        }
+      }
+
+      h2 {
+        @media screen and (max-width: 1200px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      ul {
+        color: $mainBlue
+      }
+
+      i {
+        background: linear-gradient(45deg,
+            #1e4d6e,
+            #3a8ca3,
+            #f5d77c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+      }
+
+      .carousel-indicators {
+        @media screen and (min-width: 768px) {
+          width: 50%;
+          margin: auto
+        }
+      }
+
+      .modal-footer a,
+      .modal-footer button {
+        @include customButton;
+      }
+
+      .mysql {
+        // @include icon;
+
+        width: 3em;
+        color: $mainBlue;
+        border: none;
+
+        &:hover {
+          transform: none !important;
+        }
+      }
+
+      ul {
+        list-style: square;
       }
     }
   }

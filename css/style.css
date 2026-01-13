@@ -36,6 +36,15 @@
   transform: scale(1.2);
 }
 
+.btn-devis-offre {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+}
+
 section {
   scroll-margin-top: 100px;
 }
@@ -444,14 +453,6 @@ body main #offres ul {
   font-size: 18px;
   color: #233E7B;
 }
-body main #offres .btn-devis-offre {
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
-  color: white;
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: 700;
-  border: 2px solid white;
-  transition: 0.8s;
-}
 body main #offres .btn-special {
   color: #fff;
   border: 2px solid #fff;
@@ -546,4 +547,94 @@ body main #valeurs #zone5 {
 }
 body main #valeurs #zone6 {
   background-image: url("../images/performance.jpg");
+}
+body main #realisations .modal {
+  height: auto;
+}
+body main #realisations img {
+  width: 95%;
+  transform: scale(1);
+  transition: 0.4s;
+  z-index: 0;
+  filter: none;
+  border: 2px solid #233E7B;
+  border-radius: 10px;
+  width: 100%;
+  /* Format portrait simulé + crop */
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+}
+body main #realisations img:hover {
+  transform: scale(1.1);
+  transition: 0.6s;
+  z-index: 10;
+}
+body main #realisations h1 {
+  justify-content: center !important;
+  font-size: 2.6em;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-bottom: 1px solid #233E7B;
+}
+@media screen and (max-width: 767px) {
+  body main #realisations h1 {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body main #realisations h2 {
+    font-size: 1.2rem;
+  }
+}
+body main #realisations ul {
+  color: #233E7B;
+}
+body main #realisations i {
+  background: linear-gradient(45deg, #1e4d6e, #3a8ca3, #f5d77c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  body main #realisations .carousel-indicators {
+    width: 50%;
+    margin: auto;
+  }
+}
+body main #realisations .modal-footer a,
+body main #realisations .modal-footer button {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  body main #realisations .modal-footer a,
+  body main #realisations .modal-footer button {
+    width: 180px;
+  }
+}
+body main #realisations .modal-footer a:hover,
+body main #realisations .modal-footer button:hover {
+  transform: scale(1.2);
+}
+body main #realisations .mysql {
+  width: 3em;
+  color: #233E7B;
+  border: none;
+}
+body main #realisations .mysql:hover {
+  transform: none !important;
+}
+body main #realisations ul {
+  list-style: square;
 }/*# sourceMappingURL=style.css.map */
