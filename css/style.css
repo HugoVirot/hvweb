@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Exo+2:wght@400;500&display=swap");
+body {
+  overflow-x: hidden !important;
+}
+
 .alegreya-sans-sc-regular {
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 400;
@@ -99,6 +103,7 @@ body header img {
 body header nav {
   z-index: 1;
   border-bottom: 1px solid #233E7B;
+  width: 100vw;
   background: #0b1d3a;
   padding: 1rem 0;
 }
@@ -154,7 +159,7 @@ body header nav .navbar-toggler .navbar-toggler-icon {
   filter: brightness(0) invert(1);
 }
 body main img {
-  border: 3px solid #233E7B;
+  border: 2px solid #233E7B;
   border-radius: 10px;
 }
 body main #hero {
@@ -637,4 +642,104 @@ body main #realisations .mysql:hover {
 }
 body main #realisations ul {
   list-style: square;
+}
+body main #photoProfil {
+  width: 70vw;
+  height: auto;
+  filter: contrast(1.2);
+}
+@media screen and (max-width: 1024px) {
+  body main #photoProfil {
+    width: 100vw;
+    height: 50vh;
+    /* Format portrait simulé + crop */
+    aspect-ratio: 3/4;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    transform: scale(1.1);
+  }
+}
+body main #profil {
+  position: absolute;
+  right: 3vw;
+  width: auto;
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+}
+@media screen and (max-width: 1024px) {
+  body main #profil {
+    position: relative;
+    right: 0vw;
+    width: 100vw;
+  }
+}
+body main #profil h3 {
+  font-size: 2.4em;
+}
+body main #profil p {
+  color: white;
+}
+body main #carriere img {
+  border: none;
+  width: 5vw;
+  border-radius: 0px;
+  background-color: white;
+}
+@media screen and (max-width: 768px) {
+  body main #carriere img {
+    width: 25vw;
+    height: auto;
+    margin: 20px auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main #carriere #logosEntreprises i {
+    transform: rotate(90deg);
+  }
+}
+body main #carriere .zoom-img {
+  transition: transform 0.8s ease;
+}
+body main #carriere .zoom-img:hover {
+  transform: scale(2);
+}
+body main #numbers {
+  border-top: 2px solid #233E7B;
+  margin-top: 30px;
+  background-color: #F2D38B;
+  font-size: 400%;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+@media screen and (max-width: 1024px) {
+  body main #numbers {
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  body main #numbers {
+    margin-top: 100px;
+  }
+}
+body main #numbers p {
+  font-size: 20px;
+  font-family: "Exo 2";
+}
+body main #contact {
+  background-image: url(../images/terre.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+body main #contact p {
+  color: white;
+}
+body main #contact h2 {
+  border-bottom: 1px solid white;
 }/*# sourceMappingURL=style.css.map */
