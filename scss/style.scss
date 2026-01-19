@@ -258,7 +258,7 @@ body {
         margin-bottom: 0.6rem;
       }
 
-      button {
+      a {
         @include customButton;
         width: 250px;
 
@@ -382,9 +382,9 @@ body {
         font-size: 18px;
       }
 
-      button {
+      a {
         @include customButton;
-
+        width: 250px !important;
       }
     }
 
@@ -550,7 +550,7 @@ body {
         }
       }
 
-      button {
+      a {
         @include customButton;
       }
     }
@@ -748,6 +748,7 @@ body {
       #boutonContact {
         @include customButton;
         font-size: 22px;
+        width: 280px !important
       }
     }
 

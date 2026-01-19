@@ -229,7 +229,7 @@ body main #hero .services {
 body main #hero .services li {
   margin-bottom: 0.6rem;
 }
-body main #hero button {
+body main #hero a {
   background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
@@ -240,15 +240,15 @@ body main #hero button {
   width: 250px;
 }
 @media screen and (max-width: 768px) {
-  body main #hero button {
+  body main #hero a {
     width: 180px;
   }
 }
-body main #hero button:hover {
+body main #hero a:hover {
   transform: scale(1.2);
 }
 @media screen and (max-width: 768px) {
-  body main #hero button {
+  body main #hero a {
     width: 180px;
   }
 }
@@ -349,7 +349,7 @@ body main #agence #paragraphe1 {
 body main #agence #paragraphe2 {
   font-size: 18px;
 }
-body main #agence button {
+body main #agence a {
   background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
@@ -357,13 +357,14 @@ body main #agence button {
   border: 2px solid white;
   transition: 0.8s;
   width: 250px;
+  width: 250px !important;
 }
 @media screen and (max-width: 768px) {
-  body main #agence button {
+  body main #agence a {
     width: 180px;
   }
 }
-body main #agence button:hover {
+body main #agence a:hover {
   transform: scale(1.2);
 }
 body main #services {
@@ -497,7 +498,7 @@ body main #offres #avantages h4 {
 body main #offres #avantages h4 {
   font-size: 20px;
 }
-body main #offres button {
+body main #offres a {
   background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
@@ -507,11 +508,11 @@ body main #offres button {
   width: 250px;
 }
 @media screen and (max-width: 768px) {
-  body main #offres button {
+  body main #offres a {
     width: 180px;
   }
 }
-body main #offres button:hover {
+body main #offres a:hover {
   transform: scale(1.2);
 }
 body main #valeurs h3 {
@@ -695,6 +696,7 @@ body main #realisations #boutonContact {
   transition: 0.8s;
   width: 250px;
   font-size: 22px;
+  width: 280px !important;
 }
 @media screen and (max-width: 768px) {
   body main #realisations #boutonContact {
