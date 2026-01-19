@@ -4,24 +4,6 @@ body {
   overflow-x: hidden !important;
 }
 
-.alegreya-sans-sc-regular {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.alegreya-sans-sc-medium {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.alegreya-sans-sc-bold {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 .custom-btn {
   background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
@@ -328,8 +310,8 @@ body main #agence i:hover {
 }
 body main #agence img {
   width: 55vw;
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 @media screen and (max-width: 768px) {
   body main #agence img {
@@ -562,23 +544,23 @@ body main #valeurs .zone:hover .texte {
   opacity: 1;
 }
 body main #valeurs #zone1 {
-  background-image: url("../images/poignee_mains.jpg");
+  background-image: url("../images/poignee_mains.webp");
   position: relative;
 }
 body main #valeurs #zone2 {
-  background-image: url("../images/conference.jpg");
+  background-image: url("../images/conference.webp");
 }
 body main #valeurs #zone3 {
-  background-image: url("../images/montre_connectee.jpg");
+  background-image: url("../images/montre_connectee.webp");
 }
 body main #valeurs #zone4 {
-  background-image: url("../images/pouce_leve.jpg");
+  background-image: url("../images/pouce_leve.webp");
 }
 body main #valeurs #zone5 {
-  background-image: url("../images/ordinateur.jpg");
+  background-image: url("../images/ordinateur.webp");
 }
 body main #valeurs #zone6 {
-  background-image: url("../images/performance.jpg");
+  background-image: url("../images/performance.webp");
 }
 body main #realisations .modal {
   height: auto;
@@ -793,7 +775,7 @@ body main #numbers p {
   font-family: "Exo 2";
 }
 body main #contact {
-  background-image: url(../images/terre.jpg);
+  background-image: url(../images/terre.webp);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
