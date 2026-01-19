@@ -23,7 +23,7 @@ body {
 }
 
 .custom-btn {
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
@@ -41,7 +41,7 @@ body {
 }
 
 .btn-devis-offre {
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
@@ -61,7 +61,7 @@ h2 {
   border-bottom: 1px solid #233E7B;
 }
 h2 i {
-  color: #F2D38B;
+  color: #f5d77c;
   font-size: 40px;
 }
 
@@ -101,7 +101,7 @@ body header img {
   height: auto;
 }
 body header nav {
-  z-index: 1;
+  z-index: 2000;
   border-bottom: 1px solid #233E7B;
   width: 100vw;
   background: #0b1d3a;
@@ -132,17 +132,14 @@ body header nav .nav-link::after {
   bottom: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
   transition: width 0.3s ease;
-}
-body header nav .nav-link:hover {
-  color: #F2D38B;
 }
 body header nav .nav-link:hover::after {
   width: 100%;
 }
 body header nav .nav-link.active {
-  color: #F2D38B;
+  color: #f5d77c;
 }
 body header nav .nav-link.active::after {
   width: 100%;
@@ -166,7 +163,7 @@ body main #hero {
   color: white;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
   text-align: center;
   padding: 50px 20px;
   /* Curseur clignotant */
@@ -233,7 +230,7 @@ body main #hero .services li {
   margin-bottom: 0.6rem;
 }
 body main #hero button {
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
@@ -260,10 +257,18 @@ body main #hero ul {
   font-size: 1.3rem !important;
   color: white;
 }
+body main #hero ul {
+  font-size: 1.1rem !important;
+}
 body main #hero #logo {
   width: 290px;
   height: auto;
   border: none;
+}
+@media screen and (max-width: 768px) {
+  body main #hero #logo {
+    width: 200px;
+  }
 }
 body main #hero h1 {
   font-size: 4.5rem;
@@ -316,7 +321,11 @@ body main #hero .scroll-track i {
   }
 }
 body main #agence i {
-  color: #F2D38B;
+  color: #f5d77c;
+}
+body main #agence i:hover {
+  transform: scale(1.4);
+  transition: 0.5s;
 }
 body main #agence img {
   width: 55vw;
@@ -341,7 +350,7 @@ body main #agence #paragraphe2 {
   font-size: 18px;
 }
 body main #agence button {
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
@@ -364,7 +373,7 @@ body main #services ul {
   font-size: 18px;
 }
 body main #services i {
-  color: #F2D38B;
+  color: #f5d77c;
 }
 body main #services .carousel-control-prev,
 body main #services .carousel-control-next {
@@ -385,7 +394,8 @@ body main #services .carousel-control-next:focus {
   /* supprime zoom ou déplacement */
 }
 body main #services .carousel-caption {
-  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c) !important;
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c) !important;
+  border-radius: 15px;
 }
 @media screen and (max-width: 768px) {
   body main #services {
@@ -434,7 +444,7 @@ body main #services p {
   color: white;
 }
 body main #offres .pack {
-  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
   color: white;
   border-radius: 20px;
 }
@@ -466,7 +476,7 @@ body main #offres .btn-special {
   transform: none !important;
 }
 body main #offres .technosPacks i {
-  color: #F2D38B;
+  color: #f5d77c;
 }
 body main #offres #avantages {
   border: 2px solid #233E7B;
@@ -487,8 +497,25 @@ body main #offres #avantages h4 {
 body main #offres #avantages h4 {
   font-size: 20px;
 }
+body main #offres button {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  body main #offres button {
+    width: 180px;
+  }
+}
+body main #offres button:hover {
+  transform: scale(1.2);
+}
 body main #valeurs h3 {
-  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
   color: white;
   border-radius: 10px;
   border: 1px solid white;
@@ -566,12 +593,16 @@ body main #realisations img {
   border-radius: 10px;
   width: 100%;
   /* Format portrait simulé + crop */
-  aspect-ratio: 4/3;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  display: block;
+}
+@media screen and (max-width: 768px) {
+  body main #realisations img {
+    aspect-ratio: 4/3;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    display: block;
+  }
 }
 body main #realisations img:hover {
   transform: scale(1.1);
@@ -599,12 +630,15 @@ body main #realisations h1 {
 body main #realisations ul {
   color: #233E7B;
 }
-body main #realisations i {
+body main #realisations #projets i {
   background: linear-gradient(45deg, #1e4d6e, #3a8ca3, #f5d77c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+body main #realisations #palette {
+  color: #f5d77c !important;
 }
 @media screen and (min-width: 768px) {
   body main #realisations .carousel-indicators {
@@ -612,9 +646,18 @@ body main #realisations i {
     margin: auto;
   }
 }
+body main #realisations .modal {
+  height: 100vh;
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  body main #realisations .modal {
+    height: auto;
+    margin-top: 20vh;
+  }
+}
 body main #realisations .modal-footer a,
 body main #realisations .modal-footer button {
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #F2D38B);
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
@@ -643,6 +686,24 @@ body main #realisations .mysql:hover {
 body main #realisations ul {
   list-style: square;
 }
+body main #realisations #boutonContact {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  body main #realisations #boutonContact {
+    width: 180px;
+  }
+}
+body main #realisations #boutonContact:hover {
+  transform: scale(1.2);
+}
 body main #photoProfil {
   width: 70vw;
   height: auto;
@@ -667,7 +728,7 @@ body main #profil {
   width: auto;
   color: white;
   border-radius: 20px;
-  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #3a8ca3, #f5d77c);
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
 }
 @media screen and (max-width: 1024px) {
   body main #profil {
@@ -684,7 +745,7 @@ body main #profil p {
 }
 body main #carriere img {
   border: none;
-  width: 5vw;
+  width: 4vw;
   border-radius: 0px;
   background-color: white;
 }
@@ -709,7 +770,7 @@ body main #carriere .zoom-img:hover {
 body main #numbers {
   border-top: 2px solid #233E7B;
   margin-top: 30px;
-  background-color: #F2D38B;
+  background-color: #f5d77c;
   font-size: 400%;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 500;
@@ -739,7 +800,82 @@ body main #contact {
 }
 body main #contact p {
   color: white;
+  font-size: 21px;
 }
 body main #contact h2 {
   border-bottom: 1px solid white;
+}
+body main #contact #formContainer {
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
+  border-radius: 10px;
+  max-width: 800px;
+}
+body main #contact label {
+  font-weight: bold;
+}
+body main #contact #envoyer {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  body main #contact #envoyer {
+    width: 180px;
+  }
+}
+body main #contact #envoyer:hover {
+  transform: scale(1.2);
+}
+body main #contact #confirmation {
+  border-radius: 20px;
+}
+body footer {
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
+  color: white;
+}
+body footer img {
+  width: 17vw;
+}
+@media screen and (max-width: 768px) {
+  body footer img {
+    width: 50vw;
+  }
+}
+body footer i {
+  transition: 1.5s;
+}
+body footer i:hover {
+  transform: translateX(100px) translateY(-100px);
+  transition: 1.5s;
+}
+body footer .nav-link {
+  margin-top: 20px;
+}
+body footer .modal-header {
+  background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
+}
+body footer h3 {
+  margin-top: 25px;
+}
+body footer #fermer {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  body footer #fermer {
+    width: 180px;
+  }
+}
+body footer #fermer:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */

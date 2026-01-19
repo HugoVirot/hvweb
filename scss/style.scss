@@ -32,7 +32,8 @@ body {
 }
 
 .btn-devis-offre {
-  background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
+  // background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
+  background: $gradient;
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
@@ -97,7 +98,7 @@ body {
     }
 
     nav {
-      z-index: 1;
+      z-index: 2000;
       border-bottom: 1px solid $mainBlue;
       width: 100vw;
 
@@ -131,13 +132,11 @@ body {
           bottom: 0;
           width: 0%;
           height: 3px;
-          background: linear-gradient(45deg, $mainBlue, #3a8ca3, $mainYellow);
+          background: $gradient;
           transition: width .3s ease;
         }
 
         &:hover {
-          color: $mainYellow;
-
           &::after {
             width: 100%;
           }
@@ -185,17 +184,8 @@ body {
       color: white;
       width: 100%;
       min-height: 100vh;
-      background: linear-gradient(45deg,
-          #0b1d3a,
-          #1e4d6e,
-          #3a8ca3,
-          #f5d77c);
-      //       background: linear-gradient(45deg,
-      // #0b1d3a,
-      // #1e4d6e,
-      // #3a8ca3,
-      // #cfdba3,
-      // #f5d77c);
+      background: $gradient;
+
       text-align: center;
       padding: 50px 20px;
 
@@ -283,8 +273,17 @@ body {
         color: white;
       }
 
+      ul {
+        font-size: 1.1rem !important;
+      }
+
       #logo {
         width: 290px;
+
+        @media screen and (max-width: 768px) {
+          width: 200px;
+        }
+
         height: auto;
         border: none;
       }
@@ -351,6 +350,11 @@ body {
     #agence {
       i {
         color: $mainYellow;
+
+        &:hover {
+          transform: scale(1.4);
+          transition: 0.5s;
+        }
       }
 
       img {
@@ -417,11 +421,8 @@ body {
       }
 
       .carousel-caption {
-        background: linear-gradient(45deg,
-            #0b1d3a,
-            #1e4d6e,
-            #3a8ca3,
-            #f5d77c) !important;
+        background: $gradient !important;
+        border-radius: 15px;
       }
 
       @media screen and (max-width: 768px) {
@@ -482,11 +483,7 @@ body {
 
     #offres {
       .pack {
-        background: linear-gradient(45deg,
-            #0b1d3a,
-            #1e4d6e,
-            #3a8ca3,
-            #f5d77c);
+        background: $gradient;
         color: white;
         border-radius: 20px;
       }
@@ -552,17 +549,17 @@ body {
           font-size: 20px;
         }
       }
+
+      button {
+        @include customButton;
+      }
     }
 
     //******* valeurs **********
 
     #valeurs {
       h3 {
-        background: linear-gradient(45deg,
-            #0b1d3a,
-            #1e4d6e,
-            #3a8ca3,
-            #f5d77c);
+        background: $gradient;
         color: white;
         border-radius: 10px;
         border: 1px solid white;
@@ -658,10 +655,13 @@ body {
         border-radius: 10px;
         width: 100%;
         /* Format portrait simulé + crop */
-        aspect-ratio: 4/3; // ajuste si tu veux (2/3, 9/16, etc.)
-        object-fit: cover;
-        object-position: center;
-        display: block;
+
+        @media screen and (max-width: 768px) {
+          aspect-ratio: 4/3;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
 
         &:hover {
           transform: scale(1.1);
@@ -693,7 +693,7 @@ body {
         color: $mainBlue
       }
 
-      i {
+      #projets i {
         background: linear-gradient(45deg,
             #1e4d6e,
             #3a8ca3,
@@ -704,10 +704,23 @@ body {
         -moz-text-fill-color: transparent;
       }
 
+      #palette {
+        color: $mainYellow !important
+      }
+
       .carousel-indicators {
         @media screen and (min-width: 768px) {
           width: 50%;
           margin: auto
+        }
+      }
+
+      .modal {
+        height: 100vh;
+
+        @media screen and (min-width: 769px) and (max-width: 1200px) {
+          height: auto;
+          margin-top: 20vh
         }
       }
 
@@ -730,6 +743,11 @@ body {
 
       ul {
         list-style: square;
+      }
+
+      #boutonContact {
+        @include customButton;
+        font-size: 22px;
       }
     }
 
@@ -764,11 +782,7 @@ body {
 
       color: white;
       border-radius: 20px;
-      background: linear-gradient(45deg,
-        #0b1d3a,
-        #1e4d6e,
-        #3a8ca3,
-        #f5d77c);
+      background: $gradient;
 
       h3 {
         font-size: 2.4em;
@@ -782,7 +796,7 @@ body {
     #carriere {
       img {
         border: none;
-        width: 5vw;
+        width: 4vw;
         border-radius: 0px;
         background-color: white;
 
@@ -844,13 +858,72 @@ body {
       color: white;
 
       p {
-        color: white
+        color: white;
+        font-size: 21px;
       }
 
       h2 {
         border-bottom: 1px solid white;
       }
+
+      #formContainer {
+        background: $gradient;
+        border-radius: 10px;
+        max-width: 800px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      #envoyer {
+        @include customButton;
+        font-size: 22px;
+      }
+
+      #confirmation {
+        border-radius: 20px;
+      }
     }
 
+  }
+
+  // footer {
+  footer {
+    background: $gradient;
+    color: white;
+
+    img {
+      width: 17vw;
+
+      @media screen and (max-width: 768px) {
+        width: 50vw
+      }
+    }
+
+    i {
+      transition: 1.5s;
+    }
+
+    i:hover {
+      transform: translateX(100px) translateY(-100px);
+      transition: 1.5s;
+    }
+
+    .nav-link {
+      margin-top: 20px;
+    }
+
+    .modal-header {
+      background: $gradient;
+    }
+
+    h3 {
+      margin-top: 25px;
+    }
+
+    #fermer {
+      @include customButton
+    }
   }
 }
