@@ -1,12 +1,14 @@
 @import "variables";
 @import "mixins";
 
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500;700&family=Exo+2:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Exo+2:wght@400;500&display=swap");
 
 // ************** règles générales **************
 
 body {
-  overflow-x: hidden !important;
+  overflow-x: hidden;
+  width: 100dvw;
+  max-width: 100%;
 }
 
 .custom-btn {
@@ -52,11 +54,40 @@ p {
   color: $mainBlue;
 }
 
-.modal {
-  width: 100%;
-  max-width: 100%;
-  height: 100dvh;
+/* Empêche le décalage dû au padding ajouté par Bootstrap */
+body.modal-open {
+  padding-right: 0 !important;
 }
+
+/* Centre correctement le modal et empêche tout dépassement */
+.modal-dialog {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+}
+
+/* Largeur réelle du viewport sur Chrome mobile */
+@supports (width: 100dvw) {
+  .modal {
+    width: 100dvw;
+    max-width: 100dvw;
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+}
+
+/* Footer non masqué par la barre du bas */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .modal-footer {
+    padding-bottom: calc(var(--bs-modal-padding) + env(safe-area-inset-bottom));
+  }
+}
+
+/* Scroll interne propre */
+.modal-body {
+  overflow-y: auto;
+}
+
 
 // effet d'apparition (combiné au script js)
 
@@ -87,7 +118,7 @@ body {
     nav {
       z-index: 2000;
       border-bottom: 1px solid $mainBlue;
-      width: 100vw;
+      width: 100dvw;
 
       button {
         width: auto !important
@@ -590,6 +621,7 @@ body {
             font-size: 1.3rem;
             line-height: 3rem
           }
+
           font-weight: 600;
           margin: 30px
         }
@@ -740,7 +772,7 @@ body {
       filter: contrast(1.2);
 
       @media screen and (max-width: 1024px) {
-        width: 100vw;
+        width: 100dvw;
         height: 50vh;
         /* Format portrait simulé + crop */
         aspect-ratio: 3 / 4; // ajuste si tu veux (2/3, 9/16, etc.)
@@ -758,7 +790,7 @@ body {
       @media screen and (max-width: 1200px) {
         position: relative;
         right: 0vw;
-        width: 100vw;
+        width: 100dvw;
         border-radius: 0px;
       }
 

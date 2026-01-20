@@ -1,7 +1,9 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500;700&family=Exo+2:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Exo+2:wght@400;500&display=swap");
 body {
-  overflow-x: hidden !important;
+  overflow-x: hidden;
+  width: 100dvw;
+  max-width: 100%;
 }
 
 .custom-btn {
@@ -59,10 +61,36 @@ p {
   color: #233E7B;
 }
 
-.modal {
-  width: 100%;
-  max-width: 100%;
-  height: 100dvh;
+/* Empêche le décalage dû au padding ajouté par Bootstrap */
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+/* Centre correctement le modal et empêche tout dépassement */
+.modal-dialog {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+}
+
+/* Largeur réelle du viewport sur Chrome mobile */
+@supports (width: 100dvw) {
+  .modal {
+    width: 100dvw;
+    max-width: 100dvw;
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+}
+/* Footer non masqué par la barre du bas */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .modal-footer {
+    padding-bottom: calc(var(--bs-modal-padding) + env(safe-area-inset-bottom));
+  }
+}
+/* Scroll interne propre */
+.modal-body {
+  overflow-y: auto;
 }
 
 .animate-on-scroll {
@@ -90,7 +118,7 @@ body header img {
 body header nav {
   z-index: 2000;
   border-bottom: 1px solid #233E7B;
-  width: 100vw;
+  width: 100dvw;
   background: #0b1d3a;
   padding: 1rem 0;
 }
@@ -698,7 +726,7 @@ body main #photoProfil {
 }
 @media screen and (max-width: 1024px) {
   body main #photoProfil {
-    width: 100vw;
+    width: 100dvw;
     height: 50vh;
     /* Format portrait simulé + crop */
     aspect-ratio: 3/4;
@@ -720,7 +748,7 @@ body main #profil {
   body main #profil {
     position: relative;
     right: 0vw;
-    width: 100vw;
+    width: 100dvw;
     border-radius: 0px;
   }
 }
