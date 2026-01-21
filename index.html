@@ -9,7 +9,7 @@
     content="HV Web – Créateur d’expériences web. Sites performants, modernes et sur mesure (en PHP & JavaScript) pour valoriser votre image et accompagner votre croissance.">
   <meta property="og:title" content="HV Web – Développeur Web Freelance">
   <meta property="og:description" content="HV Web, mon agence digitale indépendante dédiée à la création de sites performants et sur mesure.">
-  <meta property="og:image" content="https://hvweb.fr/images/screenshot_accueil.webp">
+  <meta property="og:image" content="https://hvweb.fr/images/screenshot_accueil.jpg">
   <meta property="og:url" content="https://hvweb.fr">
   <meta property="og:type" content="website">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -1677,7 +1677,7 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label for="raisonContact" class="form-label">Je contacte HV Web pour *</label>
-                <select class="form-select" aria-label="Default select example" id="raisonContact" required>
+                <select class="form-select" aria-label="Default select example"  name="raisonContact" id="raisonContact" required>
                   <option value="" disabled selected hidden>Choisissez un motif</option>
                   <option value="1">un devis (gratuit)</option>
                   <option value="2">une demande d'information</option>
@@ -1690,7 +1690,7 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label for="email" class="form-label"> Adresse email *</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required
                   placeholder="paul.dupont@exemple.fr">
                 <div id="emailHelp" class="form-text text-white">Nous ne la partagerons jamais avec des tiers.</div>
               </div>
@@ -1703,14 +1703,14 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label for="nom" class="form-label">Nom *</label>
-                <input type="text" class="form-control" id="nom" required placeholder="DUPONT">
+                <input type="text" class="form-control" id="nom" name="nom" required placeholder="DUPONT">
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="mb-3">
                 <label for="prenom" class="form-label">Prénom *</label>
-                <input type="text" class="form-control" id="prenom" required placeholder="Paul">
+                <input type="text" class="form-control" id="prenom" name="prenom" required placeholder="Paul">
               </div>
             </div>
 
@@ -1720,13 +1720,13 @@
 
             <div class="col-md-6 d-flex justify-content-center align-items-center">
               <div class="form-check me-4">
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" checked>
-                <label class="form-check-label" for="radioDefault1">
+                <input class="form-check-input" type="radio" name="typeClient" value="Entreprise" id="entreprise" checked>
+                <label class="form-check-label" for="entreprise">
                   Entreprise </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
-                <label class="form-check-label" for="radioDefault2">
+                <input class="form-check-input" type="radio" name="typeClient" value="Particulier" id="particulier">
+                <label class="form-check-label" for="particulier">
                   Particulier </label>
               </div>
             </div>
@@ -1734,14 +1734,14 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label for="entreprise" class="form-label">Nom de l'entreprise</label>
-                <input type="text" class="form-control" id="entreprise" placeholder="DUPONT & Co.">
+                <input type="text" class="form-control" id="entreprise"  name="nom_entreprise" placeholder="DUPONT & Co.">
               </div>
             </div>
           </div>
 
           <div class="my-4">
             <label for="exampleFormControlTextarea1" class="form-label">Votre message *</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="message"
               placeholder="Merci de décrire avec précision votre projet ou votre demande" required></textarea>
           </div>
 
