@@ -22,7 +22,7 @@ body {
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
   border: 2px solid white;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 section {
@@ -38,8 +38,18 @@ h2 {
 
   i {
     color: $mainYellow;
-    font-size: 40px
+    font-size: 40px;
   }
+}
+
+main > section:not(#contact) > h2 > i {
+  background: $gradient;
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 h3 {
@@ -88,7 +98,6 @@ body.modal-open {
   overflow-y: auto;
 }
 
-
 // effet d'apparition (combiné au script js)
 
 .animate-on-scroll {
@@ -121,7 +130,7 @@ body {
       width: 100dvw;
 
       button {
-        width: auto !important
+        width: auto !important;
       }
 
       .navbar-toggler:focus {
@@ -134,9 +143,9 @@ body {
 
       .nav-link {
         color: black;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         position: relative;
-        transition: color .3s;
+        transition: color 0.3s;
 
         @media screen and (max-width: 768px) {
           letter-spacing: 10px;
@@ -151,7 +160,7 @@ body {
           width: 0%;
           height: 3px;
           background: $gradient;
-          transition: width .3s ease;
+          transition: width 0.3s ease;
         }
 
         &:hover {
@@ -184,7 +193,6 @@ body {
         }
       }
     }
-
 
     // .navbar-expand-lg {
     //   background-color: transparent !important;
@@ -322,7 +330,7 @@ body {
         }
       }
 
-      #votreAgence {
+      #votrestudio {
         font-size: 24px !important;
       }
 
@@ -330,47 +338,58 @@ body {
         font-size: $paragraphSize;
       }
 
-      // défilement icônes technos
       .container.overflow-hidden {
         overflow: hidden;
       }
 
       .scroll-track {
         flex-wrap: nowrap;
-        gap: 30px;
         width: max-content;
+        will-change: transform;
+        white-space: nowrap;
         animation: scroll-left 10s linear infinite;
+      }
 
-        @media screen and (max-width: 768px) {
-          gap: 60px;
-          animation: scroll-left 10s linear infinite;
-        }
+      .scroll-set {
+        display: flex;
+        flex: 0 0 max-content;
       }
 
       .scroll-track i {
         flex-shrink: 0;
       }
 
-      /* Animation fluide */
       @keyframes scroll-left {
-        0% {
-          transform: translateX(0);
+        from {
+          transform: translate3d(0, 0, 0);
         }
 
-        100% {
-          transform: translateX(-50%);
+        to {
+          transform: translate3d(-50%, 0, 0);
         }
       }
 
+      @media screen and (max-width: 768px) {
+        .scroll-track {
+          animation-duration: 7s;
+        }
+      }
     }
 
-    //************ l'agence **************
-    #agence {
+    //************ le studio **************
+    #studio {
       i {
         color: $mainYellow;
+        background: $gradient;
+        width: 80px;
+        height: 80px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
 
         &:hover {
-          transform: scale(1.4);
+          transform: scale(1.2);
           transition: 0.5s;
         }
       }
@@ -378,7 +397,11 @@ body {
       img {
         width: 55vw;
         mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          black 70%,
+          transparent 100%
+        );
 
         @media screen and (max-width: 768px) {
           width: 90vw;
@@ -392,11 +415,7 @@ body {
         }
       }
 
-      #paragraphe1 {
-        font-size: 20px;
-      }
-
-      #paragraphe2 {
+      p {
         font-size: 18px;
       }
 
@@ -444,7 +463,6 @@ body {
       }
 
       @media screen and (max-width: 768px) {
-
         h3 {
           font-size: 20px;
         }
@@ -527,7 +545,7 @@ body {
 
       ul {
         font-size: 18px;
-        color: $mainBlue
+        color: $mainBlue;
       }
 
       .btn-special {
@@ -539,7 +557,7 @@ body {
       }
 
       .technosPacks i {
-        color: $mainYellow
+        color: $mainYellow;
       }
 
       #avantages {
@@ -548,10 +566,7 @@ body {
         background-color: rgb(238, 238, 238);
 
         i {
-          background: linear-gradient(45deg,
-              #1e4d6e,
-              #3a8ca3,
-              #f5d77c);
+          background: linear-gradient(45deg, #1e4d6e, #3a8ca3, #f5d77c);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           -moz-background-clip: text;
@@ -560,7 +575,7 @@ body {
 
         h3,
         h4 {
-          color: $mainBlue
+          color: $mainBlue;
         }
 
         h4 {
@@ -585,7 +600,7 @@ body {
         margin: auto;
 
         @media screen and (max-width: 768px) {
-          width: 70vw
+          width: 70vw;
         }
       }
 
@@ -619,11 +634,11 @@ body {
 
           @media screen and (max-width: 768px) {
             font-size: 1.3rem;
-            line-height: 3rem
+            line-height: 3rem;
           }
 
           font-weight: 600;
-          margin: 30px
+          margin: 30px;
         }
 
         &:hover .overlay {
@@ -636,35 +651,34 @@ body {
       }
 
       #zone1 {
-        background-image: url('../images/poignee_mains.webp');
+        background-image: url("../images/poignee_mains.webp");
         position: relative;
       }
 
       #zone2 {
-        background-image: url('../images/conference.webp');
+        background-image: url("../images/conference.webp");
       }
 
       #zone3 {
-        background-image: url('../images/montre_connectee.webp');
+        background-image: url("../images/montre_connectee.webp");
       }
 
       #zone4 {
-        background-image: url('../images/pouce_leve.webp');
+        background-image: url("../images/pouce_leve.webp");
       }
 
       #zone5 {
-        background-image: url('../images/ordinateur.webp');
+        background-image: url("../images/ordinateur.webp");
       }
 
       #zone6 {
-        background-image: url('../images/performance.webp');
+        background-image: url("../images/performance.webp");
       }
     }
 
     // realisations
 
     #realisations {
-
       .modal {
         height: auto;
       }
@@ -714,14 +728,11 @@ body {
       }
 
       ul {
-        color: $mainBlue
+        color: $mainBlue;
       }
 
       #projets i {
-        background: linear-gradient(45deg,
-            #1e4d6e,
-            #3a8ca3,
-            #f5d77c);
+        background: linear-gradient(45deg, #1e4d6e, #3a8ca3, #f5d77c);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
@@ -729,13 +740,13 @@ body {
       }
 
       #palette {
-        color: $mainYellow !important
+        color: $mainYellow !important;
       }
 
       .carousel-indicators {
         @media screen and (min-width: 768px) {
           width: 50%;
-          margin: auto
+          margin: auto;
         }
       }
 
@@ -744,7 +755,7 @@ body {
 
         @media screen and (min-width: 769px) and (max-width: 1200px) {
           height: auto;
-          margin-top: 20vh
+          margin-top: 20vh;
         }
       }
 
@@ -760,7 +771,7 @@ body {
       #boutonContact {
         @include customButton;
         font-size: 22px;
-        width: 280px !important
+        width: 280px !important;
       }
     }
 
@@ -807,6 +818,9 @@ body {
     }
 
     #carriere {
+      margin-left: 0;
+      margin-right: 0;
+
       img {
         border: none;
         width: 4vw;
@@ -838,12 +852,15 @@ body {
     #numbers {
       color: $mainYellow;
       font-size: 400%;
-      font-family: "Alegreya Sans SC",
-        sans-serif;
+      font-family: "Alegreya Sans SC", sans-serif;
       font-weight: 500;
 
       .number {
-        text-shadow: -1px 0 $mainBlue, 0 1px $mainBlue, 1px 0 $mainBlue, 0 -1px $mainBlue;
+        text-shadow:
+          -1px 0 $mainBlue,
+          0 1px $mainBlue,
+          1px 0 $mainBlue,
+          0 -1px $mainBlue;
       }
 
       p {
@@ -860,7 +877,7 @@ body {
       background-size: cover;
       background-attachment: fixed;
 
-      @media screen and (max-width : 768px) {
+      @media screen and (max-width: 768px) {
         background-attachment: scroll;
       }
 
@@ -894,7 +911,6 @@ body {
         border-radius: 20px;
       }
     }
-
   }
 
   // footer {
@@ -906,7 +922,7 @@ body {
       width: 17vw;
 
       @media screen and (max-width: 768px) {
-        width: 50vw
+        width: 50vw;
       }
     }
 
@@ -932,7 +948,7 @@ body {
     }
 
     #fermer {
-      @include customButton
+      @include customButton;
     }
   }
 }
