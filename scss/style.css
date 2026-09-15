@@ -783,6 +783,15 @@ body main #profil {
     border-radius: 0px;
   }
 }
+@media (min-width: 768px) {
+  body main #profil .col-md-2 {
+    width: 120px;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 body main #profil {
   color: white;
   background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);

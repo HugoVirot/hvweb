@@ -1638,8 +1638,10 @@
               </div>
             </div>
 
-            <div class=" row" id="carriere">
-              <i class="col-md-2 fa-solid fa-signs-post fa-2x text-center"></i>
+            <div class="row" id="carriere">
+              <div class="col-md-2 text-center">
+                <i class="fa-solid fa-signs-post fa-2x my-auto mb-3 mb-md-0"></i>
+              </div>
               <div class="col-md-10 d-flex d-md-block flex-column" id="logosEntreprises">
                 <img class="zoom-img" src="images/logo_enedis.png" loading="lazy" alt="logo Enedis">
                 <i class="mx-2 fa-solid fa-arrow-right-long"></i>
@@ -1703,7 +1705,10 @@
 
       <div class="container p-5" id="formContainer">
 
-        <form id="contactForm" class="animate-on-scroll">
+        <form id="contactForm" class="animate-on-scroll" action="https://formsubmit.co/d54b96a062b8093438f5d07895bfed62"
+          method="POST">
+          <input type="hidden" name="_subject" value="Nouveau message depuis HV Web">
+          <input type="hidden" name="_template" value="table">
           <div class="row">
 
             <div class="col-md-6">
@@ -1715,7 +1720,7 @@
                   <option value="1">un devis (gratuit)</option>
                   <option value="2">une demande d'information</option>
                   <option value="3">proposer une mission</option>
-                  <option value="3">autre raison</option>
+                  <option value="4">autre raison</option>
                 </select>
               </div>
             </div>
@@ -1946,33 +1951,6 @@
 
   <script>
 
-    //******************** formulaire de contact *********************
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const consent = document.getElementById("consent");
-      // Vérification de la checkbox 
-      if (!consent.checked) {
-        alert("Merci de cocher la case de consentement avant d'envoyer.");
-        return;
-      }
-
-      fetch("https://formsubmit.co/d54b96a062b8093438f5d07895bfed62", {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: new FormData(this)
-      })
-        .then(response => {
-          if (response.ok) {
-            document.getElementById("confirmation").style.display = "block";
-            this.reset();
-            setTimeout(() => {
-              document.getElementById("confirmation").style.display = "none";
-            }, 5000)
-          }
-        });
-    });
-
     // **************** navbar fixée si scroll > 380px ********************
     const navbar = document.querySelector('nav');
     const body = document.body;
@@ -2109,14 +2087,32 @@
 
     type();
 
-    // ***************** bouton envoyer visible seulement si checkbox cochée ************************ 
+    // ***************** formulaire : bouton envoyer visible seulement si checkbox cochée ************************ 
+
     const consent = document.getElementById('consent');
     const envoyer = document.getElementById('envoyer');
     consent.addEventListener('change', () => {
       envoyer.disabled = !consent.checked;
     })
 
+    // Gestion de l'état du bouton 
+    consent.addEventListener('change', () => { envoyer.disabled = !consent.checked; });
+
+    // Sécurité supplémentaire : vérification au moment de l'envoi 
+    contactForm.addEventListener('submit', (e) => {
+      // Même si quelqu'un réactive le bouton via l'Inspecteur, l'envoi est bloqué si la checkbox n'est pas cochée. 
+      if (!consent.checked) {
+        e.preventDefault(); alert('Merci de cocher la case de consentement avant d’envoyer le formulaire.');
+        // Remet le bouton dans le bon état 
+        envoyer.disabled = true;
+        // Remet le focus sur la checkbox 
+        consent.focus(); return false;
+      }
+      // Checkbox cochée → le formulaire peut être envoyé
+    });
+
     // ************************ afficher numéro et mail dans mentions légales **************************
+
     document.getElementById("tel").textContent = "06 30 47 86 13";
 
     const user = "contact";
