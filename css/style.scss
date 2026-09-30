@@ -193,11 +193,6 @@ body {
         }
       }
     }
-
-    // .navbar-expand-lg {
-    //   background-color: transparent !important;
-    //   background: none !important;
-    // }
   }
 
   main {
@@ -242,35 +237,78 @@ body {
       }
 
       /* =========================================================
-     ZONE 4 — TEXTE ANIMÉ
+     ZONE 3 — TEXTE ANIMÉ
      ========================================================= */
 
-      @media screen and (max-width: 768px) {
-        .typing {
+      .typing-wrapper {
+        position: relative;
+
+        width: 100%;
+        max-width: 800px;
+
+        // Hauteur réservée pour empêcher les éléments
+        // suivants de remonter pendant l'effacement
+        height: 4rem;
+
+        margin: 0 auto 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 768px) {
+          height: 7rem;
+        }
+      }
+
+      .typing {
+        position: relative;
+
+        font-family: "Alegreya Sans SC", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 1.2;
+
+        white-space: nowrap;
+
+        // Curseur
+        &::after {
+          content: "";
+          display: inline-block;
+
+          width: 3px;
+          height: 1em;
+
+          margin-left: 5px;
+
+          background: white;
+
+          vertical-align: -0.15em;
+
+          animation: blink 0.7s step-end infinite;
+        }
+
+        @media screen and (max-width: 768px) {
           font-size: 1.8rem;
           white-space: normal;
-          border-right: none;
-          animation: none;
+
+          // Pas de curseur sur mobile
+          &::after {
+            display: none;
+          }
         }
       }
 
       /* Animation du curseur */
       @keyframes blink {
-        0% {
-          border-color: transparent;
-        }
-
         50% {
-          border-color: white;
-        }
-
-        100% {
-          border-color: transparent;
+          opacity: 0;
         }
       }
 
       /* =========================================================
-     ZONE 5 — PRÉSENTATION / TEXTE
+     ZONE 4 — PRÉSENTATION / TEXTE
      ========================================================= */
 
       p {
@@ -278,28 +316,22 @@ body {
         font-size: $paragraphSize;
       }
 
-      #votrestudio {
-        font-size: 1.2rem !important;
-      }
-
       /* =========================================================
-     ZONE 6 — LISTE DES SERVICES
+     ZONE 5 — LISTE DES SERVICES
      ========================================================= */
 
-      // .servicesHero {
-      //   width: fit-content;
-      //   margin: 0 auto 30px;
-      //   padding: 0;
-      //   list-style: none;
-      //   text-align: left;
-      // }
+      .servicesHero {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto 30px;
+      }
 
       .servicesHero li {
         margin-bottom: 1rem;
       }
 
       /* =========================================================
-     ZONE 7 — BOUTONS CTA
+     ZONE 6 — BOUTONS CTA
      ========================================================= */
 
       a {
@@ -307,7 +339,7 @@ body {
       }
 
       /* =========================================================
-     ZONE 8 — LOGO
+     ZONE 7 — LOGO
      ========================================================= */
 
       #logo {
@@ -322,7 +354,7 @@ body {
       }
 
       /* =========================================================
-     ZONE 9 — BANDEAU DES TECHNOLOGIES
+     ZONE 8 — BANDEAU DES TECHNOLOGIES
      ========================================================= */
 
       .container.overflow-hidden {
@@ -359,9 +391,10 @@ body {
           transform: translate3d(-50%, 0, 0);
         }
       }
-      // --------------------------------------------------
-      // MOBILE
-      // --------------------------------------------------
+
+      /* =========================================================
+     ZONE 9 — MOBILE
+     ========================================================= */
 
       @media screen and (max-width: 768px) {
         min-height: 100svh;

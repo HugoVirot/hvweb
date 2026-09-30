@@ -13,11 +13,11 @@ body {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   .custom-btn {
-    width: 180px;
+    width: 200px;
   }
 }
 .custom-btn:hover {
@@ -187,129 +187,26 @@ body main img {
   border-radius: 10px;
 }
 body main #hero {
+  /* =========================================================
+  ZONE 1 — STRUCTURE GÉNÉRALE DU HERO
+  ========================================================= */
   color: white;
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
   text-align: center;
   padding: 50px 20px;
-}
-body main #hero .typing-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  /* largeur max du bloc */
-  margin: auto;
-  /* centre le bloc */
-  text-align: center;
-  height: 3rem;
-  /* fixe la hauteur du h1 pour éviter tout décalage */
-}
-@media screen and (max-width: 768px) {
-  body main #hero .typing-wrapper {
-    height: 8rem;
-  }
-}
-body main #hero .typing-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body main #hero .typing {
-  position: absolute;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  /* curseur */
-  animation: blink 0.7s infinite;
-}
-@media screen and (max-width: 768px) {
-  body main #hero .typing {
-    white-space: inherit;
-    border-right: none;
-    animation: none;
-  }
-}
-body main #hero .ghost {
-  visibility: hidden;
-  white-space: nowrap;
-  display: block;
-}
-body main #hero {
-  /* Curseur clignotant */
-}
-@keyframes blink {
-  0% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-  100% {
-    border-color: transparent;
-  }
-}
-body main #hero .services {
-  font-size: 1.1rem;
-  font-family: "Inter", sans-serif;
-  line-height: 1.8;
-  list-style: none;
-  padding: 0;
-}
-body main #hero .services li {
-  margin-bottom: 0.6rem;
-}
-body main #hero a {
-  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
-  color: white;
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: 700;
-  border: 2px solid white;
-  transition: 0.8s;
-  width: 250px;
-}
-@media screen and (max-width: 768px) {
-  body main #hero a {
-    width: 180px;
-  }
-}
-body main #hero a:hover {
-  transform: scale(1.2);
-}
-body main #hero a {
-  width: 250px;
-}
-@media screen and (max-width: 768px) {
-  body main #hero a {
-    width: 180px;
-  }
-}
-body main #hero p,
-body main #hero ul {
-  font-size: 1.3rem !important;
-  color: white;
-}
-body main #hero ul {
-  font-size: 1.1rem !important;
-}
-body main #hero #logo {
-  width: 290px;
-}
-@media screen and (max-width: 768px) {
-  body main #hero #logo {
-    width: 200px;
-  }
-}
-body main #hero #logo {
-  height: auto;
-  border: none;
+  /* =========================================================
+  ZONE 2 — TITRE PRINCIPAL
+  ========================================================= */
 }
 body main #hero h1 {
   font-size: 4.5rem;
-  margin-bottom: 20px;
+  margin: 25px 0 15px;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.1;
 }
 @media screen and (max-width: 768px) {
   body main #hero h1 {
@@ -321,17 +218,132 @@ body main #hero h1 {
     font-size: 3.5rem;
   }
 }
-body main #hero #votrestudio {
-  font-size: 24px !important;
+body main #hero {
+  /* =========================================================
+  ZONE 3 — TEXTE ANIMÉ
+  ========================================================= */
+}
+body main #hero .typing-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 4rem;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  body main #hero .typing-wrapper {
+    height: 7rem;
+  }
+}
+body main #hero .typing {
+  position: relative;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+body main #hero .typing::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 5px;
+  background: white;
+  vertical-align: -0.15em;
+  animation: blink 0.7s step-end infinite;
+}
+@media screen and (max-width: 768px) {
+  body main #hero .typing {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+  body main #hero .typing::after {
+    display: none;
+  }
+}
+body main #hero {
+  /* Animation du curseur */
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+body main #hero {
+  /* =========================================================
+  ZONE 4 — PRÉSENTATION / TEXTE
+  ========================================================= */
 }
 body main #hero p {
+  color: white;
   font-size: 1rem;
+}
+body main #hero {
+  /* =========================================================
+  ZONE 5 — LISTE DES SERVICES
+  ========================================================= */
+}
+body main #hero .servicesHero {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 30px;
+}
+body main #hero .servicesHero li {
+  margin-bottom: 1rem;
+}
+body main #hero {
+  /* =========================================================
+  ZONE 6 — BOUTONS CTA
+  ========================================================= */
+}
+body main #hero a {
+  background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
+  color: white;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: 0.8s;
+  width: 280px;
+}
+@media screen and (max-width: 768px) {
+  body main #hero a {
+    width: 200px;
+  }
+}
+body main #hero a:hover {
+  transform: scale(1.2);
+}
+body main #hero {
+  /* =========================================================
+  ZONE 7 — LOGO
+  ========================================================= */
+}
+body main #hero #logo {
+  width: 290px;
+  height: auto;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  body main #hero #logo {
+    width: 200px;
+  }
+}
+body main #hero {
+  /* =========================================================
+  ZONE 8 — BANDEAU DES TECHNOLOGIES
+  ========================================================= */
 }
 body main #hero .container.overflow-hidden {
   overflow: hidden;
 }
 body main #hero .scroll-track {
   flex-wrap: nowrap;
+  width: -moz-max-content;
   width: max-content;
   will-change: transform;
   white-space: nowrap;
@@ -344,6 +356,9 @@ body main #hero .scroll-set {
 body main #hero .scroll-track i {
   flex-shrink: 0;
 }
+body main #hero {
+  /* Animation du bandeau */
+}
 @keyframes scroll-left {
   from {
     transform: translate3d(0, 0, 0);
@@ -352,9 +367,18 @@ body main #hero .scroll-track i {
     transform: translate3d(-50%, 0, 0);
   }
 }
+body main #hero {
+  /* =========================================================
+  ZONE 9 — MOBILE
+  ========================================================= */
+}
 @media screen and (max-width: 768px) {
+  body main #hero {
+    min-height: 100svh;
+    padding: 45px 20px 30px;
+  }
   body main #hero .scroll-track {
-    animation-duration: 7s;
+    animation-duration: 12s;
   }
 }
 body main #studio i {
@@ -387,10 +411,7 @@ body main #studio img {
     line-height: 40px;
   }
 }
-body main #studio #paragraphe1 {
-  font-size: 20px;
-}
-body main #studio #paragraphe2 {
+body main #studio p {
   font-size: 18px;
 }
 body main #studio a {
@@ -400,11 +421,11 @@ body main #studio a {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #studio a {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #studio a:hover {
@@ -462,8 +483,10 @@ body main #services .carousel-caption {
     width: 100%;
     /* Format portrait simulé + crop */
     aspect-ratio: 3/4;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     display: block;
   }
   body main #services #carouselExampleCaptions .carousel-caption {
@@ -549,11 +572,11 @@ body main #offres a {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #offres a {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #offres a:hover {
@@ -650,8 +673,10 @@ body main #realisations img {
 @media screen and (max-width: 768px) {
   body main #realisations img {
     aspect-ratio: 4/3;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     display: block;
   }
   body main #realisations img:hover {
@@ -714,12 +739,12 @@ body main #realisations .modal-footer button {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #realisations .modal-footer a,
   body main #realisations .modal-footer button {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #realisations .modal-footer a:hover,
@@ -736,11 +761,11 @@ body main #realisations #boutonContact {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #realisations #boutonContact {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #realisations #boutonContact:hover {
@@ -761,8 +786,10 @@ body main #photoProfil {
     height: 50vh;
     /* Format portrait simulé + crop */
     aspect-ratio: 3/4;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     transform: scale(1.1);
   }
 }
@@ -771,12 +798,21 @@ body main #profil {
   right: 3vw;
   border-radius: 20px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   body main #profil {
-    position: relative;
-    right: 0vw;
-    width: 100dvw;
-    border-radius: 0px;
+    position: relative !important;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+@media (min-width: 768px) {
+  body main #profil .col-md-2 {
+    width: 120px;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 body main #profil {
@@ -866,11 +902,11 @@ body main #contact #envoyer {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #contact #envoyer {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #contact #envoyer:hover {
@@ -917,13 +953,13 @@ body footer #fermer {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body footer #fermer {
-    width: 180px;
+    width: 200px;
   }
 }
 body footer #fermer:hover {
   transform: scale(1.2);
-}
+}/*# sourceMappingURL=style.css.map */
