@@ -13,11 +13,11 @@ body {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   .custom-btn {
-    width: 180px;
+    width: 200px;
   }
 }
 .custom-btn:hover {
@@ -187,56 +187,52 @@ body main img {
   border-radius: 10px;
 }
 body main #hero {
+  /* =========================================================
+  ZONE 1 — STRUCTURE GÉNÉRALE DU HERO
+  ========================================================= */
   color: white;
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
   text-align: center;
   padding: 50px 20px;
+  /* =========================================================
+  ZONE 2 — TITRE PRINCIPAL
+  ========================================================= */
 }
-body main #hero .typing-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  /* largeur max du bloc */
-  margin: auto;
-  /* centre le bloc */
-  text-align: center;
-  height: 3rem;
-  /* fixe la hauteur du h1 pour éviter tout décalage */
+body main #hero h1 {
+  font-size: 4.5rem;
+  margin: 25px 0 15px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
 }
 @media screen and (max-width: 768px) {
-  body main #hero .typing-wrapper {
-    height: 8rem;
+  body main #hero h1 {
+    font-size: 3rem;
   }
 }
-body main #hero .typing-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body main #hero h1 {
+    font-size: 3.5rem;
+  }
 }
-body main #hero .typing {
-  position: absolute;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  /* curseur */
-  animation: blink 0.7s infinite;
+body main #hero {
+  /* =========================================================
+  ZONE 4 — TEXTE ANIMÉ
+  ========================================================= */
 }
 @media screen and (max-width: 768px) {
   body main #hero .typing {
-    white-space: inherit;
+    font-size: 1.8rem;
+    white-space: normal;
     border-right: none;
     animation: none;
   }
 }
-body main #hero .ghost {
-  visibility: hidden;
-  white-space: nowrap;
-  display: block;
-}
 body main #hero {
-  /* Curseur clignotant */
+  /* Animation du curseur */
 }
 @keyframes blink {
   0% {
@@ -249,15 +245,30 @@ body main #hero {
     border-color: transparent;
   }
 }
-body main #hero .services {
-  font-size: 1.1rem;
-  font-family: "Inter", sans-serif;
-  line-height: 1.8;
-  list-style: none;
-  padding: 0;
+body main #hero {
+  /* =========================================================
+  ZONE 5 — PRÉSENTATION / TEXTE
+  ========================================================= */
 }
-body main #hero .services li {
-  margin-bottom: 0.6rem;
+body main #hero p {
+  color: white;
+  font-size: 1rem;
+}
+body main #hero #votrestudio {
+  font-size: 1.2rem !important;
+}
+body main #hero {
+  /* =========================================================
+  ZONE 6 — LISTE DES SERVICES
+  ========================================================= */
+}
+body main #hero .servicesHero li {
+  margin-bottom: 1rem;
+}
+body main #hero {
+  /* =========================================================
+  ZONE 7 — BOUTONS CTA
+  ========================================================= */
 }
 body main #hero a {
   background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
@@ -266,66 +277,35 @@ body main #hero a {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #hero a {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #hero a:hover {
   transform: scale(1.2);
 }
-body main #hero a {
-  width: 250px;
-}
-@media screen and (max-width: 768px) {
-  body main #hero a {
-    width: 180px;
-  }
-}
-body main #hero p,
-body main #hero ul {
-  font-size: 1.3rem !important;
-  color: white;
-}
-body main #hero ul {
-  font-size: 1.1rem !important;
+body main #hero {
+  /* =========================================================
+  ZONE 8 — LOGO
+  ========================================================= */
 }
 body main #hero #logo {
   width: 290px;
+  height: auto;
+  border: none;
 }
 @media screen and (max-width: 768px) {
   body main #hero #logo {
     width: 200px;
   }
 }
-body main #hero #logo {
-  height: auto;
-  border: none;
-}
-body main #hero h1 {
-  font-size: 4.5rem;
-  margin-bottom: 20px;
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-@media screen and (max-width: 768px) {
-  body main #hero h1 {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body main #hero h1 {
-    font-size: 3.5rem;
-  }
-}
-body main #hero #votrestudio {
-  font-size: 24px !important;
-}
-body main #hero p {
-  font-size: 1rem;
+body main #hero {
+  /* =========================================================
+  ZONE 9 — BANDEAU DES TECHNOLOGIES
+  ========================================================= */
 }
 body main #hero .container.overflow-hidden {
   overflow: hidden;
@@ -345,6 +325,9 @@ body main #hero .scroll-set {
 body main #hero .scroll-track i {
   flex-shrink: 0;
 }
+body main #hero {
+  /* Animation du bandeau */
+}
 @keyframes scroll-left {
   from {
     transform: translate3d(0, 0, 0);
@@ -354,8 +337,12 @@ body main #hero .scroll-track i {
   }
 }
 @media screen and (max-width: 768px) {
+  body main #hero {
+    min-height: 100svh;
+    padding: 45px 20px 30px;
+  }
   body main #hero .scroll-track {
-    animation-duration: 7s;
+    animation-duration: 12s;
   }
 }
 body main #studio i {
@@ -398,11 +385,11 @@ body main #studio a {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #studio a {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #studio a:hover {
@@ -549,11 +536,11 @@ body main #offres a {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #offres a {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #offres a:hover {
@@ -716,12 +703,12 @@ body main #realisations .modal-footer button {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #realisations .modal-footer a,
   body main #realisations .modal-footer button {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #realisations .modal-footer a:hover,
@@ -738,11 +725,11 @@ body main #realisations #boutonContact {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #realisations #boutonContact {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #realisations #boutonContact:hover {
@@ -775,12 +762,12 @@ body main #profil {
   right: 3vw;
   border-radius: 20px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   body main #profil {
-    position: relative;
-    right: 0vw;
-    width: 100dvw;
-    border-radius: 0px;
+    position: relative !important;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
   }
 }
 @media (min-width: 768px) {
@@ -879,11 +866,11 @@ body main #contact #envoyer {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body main #contact #envoyer {
-    width: 180px;
+    width: 200px;
   }
 }
 body main #contact #envoyer:hover {
@@ -930,11 +917,11 @@ body footer #fermer {
   font-weight: 700;
   border: 2px solid white;
   transition: 0.8s;
-  width: 250px;
+  width: 280px;
 }
 @media screen and (max-width: 768px) {
   body footer #fermer {
-    width: 180px;
+    width: 200px;
   }
 }
 body footer #fermer:hover {

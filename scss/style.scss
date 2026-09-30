@@ -207,6 +207,10 @@ body {
     }
 
     #hero {
+      /* =========================================================
+     ZONE 1 — STRUCTURE GÉNÉRALE DU HERO
+     ========================================================= */
+
       color: white;
       width: 100%;
       min-height: 100vh;
@@ -215,49 +219,42 @@ body {
       text-align: center;
       padding: 50px 20px;
 
-      // effet saisie h1
-      .typing-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 600px;
-        /* largeur max du bloc */
-        margin: auto;
-        /* centre le bloc */
-        text-align: center;
-        height: 3rem;
-        /* fixe la hauteur du h1 pour éviter tout décalage */
+      /* =========================================================
+     ZONE 2 — TITRE PRINCIPAL
+     ========================================================= */
+
+      h1 {
+        font-size: $titleSize;
+        margin: 25px 0 15px;
+
+        font-family: "Alegreya Sans SC", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1.1;
 
         @media screen and (max-width: 768px) {
-          height: 8rem;
+          font-size: 3rem;
         }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 3.5rem;
+        }
       }
 
-      .typing {
-        position: absolute;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 2px solid #fff;
-        /* curseur */
-        animation: blink 0.7s infinite;
+      /* =========================================================
+     ZONE 4 — TEXTE ANIMÉ
+     ========================================================= */
 
-        @media screen and (max-width: 768px) {
-          white-space: inherit;
+      @media screen and (max-width: 768px) {
+        .typing {
+          font-size: 1.8rem;
+          white-space: normal;
           border-right: none;
           animation: none;
         }
       }
 
-      .ghost {
-        visibility: hidden;
-        white-space: nowrap;
-        display: block;
-      }
-
-      /* Curseur clignotant */
+      /* Animation du curseur */
       @keyframes blink {
         0% {
           border-color: transparent;
@@ -272,71 +269,61 @@ body {
         }
       }
 
-      .services {
-        font-size: 1.1rem;
-        font-family: "Inter", sans-serif;
-        line-height: 1.8;
-        list-style: none;
-        padding: 0;
+      /* =========================================================
+     ZONE 5 — PRÉSENTATION / TEXTE
+     ========================================================= */
+
+      p {
+        color: white;
+        font-size: $paragraphSize;
       }
 
-      .services li {
-        margin-bottom: 0.6rem;
+      #votrestudio {
+        font-size: 1.2rem !important;
       }
+
+      /* =========================================================
+     ZONE 6 — LISTE DES SERVICES
+     ========================================================= */
+
+      // .servicesHero {
+      //   width: fit-content;
+      //   margin: 0 auto 30px;
+      //   padding: 0;
+      //   list-style: none;
+      //   text-align: left;
+      // }
+
+      .servicesHero li {
+        margin-bottom: 1rem;
+      }
+
+      /* =========================================================
+     ZONE 7 — BOUTONS CTA
+     ========================================================= */
 
       a {
         @include customButton;
-        width: 250px;
-
-        @media screen and (max-width: 768px) {
-          width: 180px;
-        }
       }
 
-      p,
-      ul {
-        font-size: 1.3rem !important;
-        color: white;
-      }
-
-      ul {
-        font-size: 1.1rem !important;
-      }
+      /* =========================================================
+     ZONE 8 — LOGO
+     ========================================================= */
 
       #logo {
         width: 290px;
+        height: auto;
+
+        border: none;
 
         @media screen and (max-width: 768px) {
           width: 200px;
         }
-
-        height: auto;
-        border: none;
       }
 
-      h1 {
-        font-size: $titleSize;
-        margin-bottom: 20px;
-        font-family: "Alegreya Sans SC", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-
-        @media screen and (max-width: 768px) {
-          font-size: 3rem;
-        }
-
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
-          font-size: 3.5rem;
-        }
-      }
-
-      #votrestudio {
-        font-size: 24px !important;
-      }
-
-      p {
-        font-size: $paragraphSize;
-      }
+      /* =========================================================
+     ZONE 9 — BANDEAU DES TECHNOLOGIES
+     ========================================================= */
 
       .container.overflow-hidden {
         overflow: hidden;
@@ -344,9 +331,12 @@ body {
 
       .scroll-track {
         flex-wrap: nowrap;
+
         width: max-content;
+
         will-change: transform;
         white-space: nowrap;
+
         animation: scroll-left 10s linear infinite;
       }
 
@@ -359,6 +349,7 @@ body {
         flex-shrink: 0;
       }
 
+      /* Animation du bandeau */
       @keyframes scroll-left {
         from {
           transform: translate3d(0, 0, 0);
@@ -368,10 +359,17 @@ body {
           transform: translate3d(-50%, 0, 0);
         }
       }
+      // --------------------------------------------------
+      // MOBILE
+      // --------------------------------------------------
 
       @media screen and (max-width: 768px) {
+        min-height: 100svh;
+
+        padding: 45px 20px 30px;
+
         .scroll-track {
-          animation-duration: 7s;
+          animation-duration: 12s;
         }
       }
     }
@@ -798,11 +796,11 @@ body {
       right: 3vw;
       border-radius: 20px;
 
-      @media screen and (max-width: 1200px) {
-        position: relative;
-        right: 0vw;
-        width: 100dvw;
-        border-radius: 0px;
+      @media screen and (max-width: 1500px) {
+        position: relative !important;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
       }
 
       @media (min-width: 768px) {
