@@ -49,7 +49,7 @@ main > section:not(#contact) > h2 > i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 30%;
 }
 
 h3 {
@@ -334,8 +334,20 @@ body {
      ZONE 6 — BOUTONS CTA
      ========================================================= */
 
-      a {
+      .custom-btn {
         @include customButton;
+      }
+
+      .hero-phone {
+        display:inline;
+        margin-top: 0.5rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       /* =========================================================
@@ -412,8 +424,8 @@ body {
       i {
         color: $mainYellow;
         background: $gradient;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         display: inline-flex;
         align-items: center;
         justify-content: center;

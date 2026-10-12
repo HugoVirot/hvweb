@@ -56,7 +56,7 @@ main > section:not(#contact) > h2 > i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 30%;
 }
 
 h3 {
@@ -301,7 +301,7 @@ body main #hero {
   ZONE 6 — BOUTONS CTA
   ========================================================= */
 }
-body main #hero a {
+body main #hero .custom-btn {
   background: linear-gradient(45deg, #233E7B, #3a8ca3, #f5d77c);
   color: white;
   font-family: "Alegreya Sans SC", sans-serif;
@@ -311,12 +311,22 @@ body main #hero a {
   width: 280px;
 }
 @media screen and (max-width: 768px) {
-  body main #hero a {
+  body main #hero .custom-btn {
     width: 200px;
   }
 }
-body main #hero a:hover {
+body main #hero .custom-btn:hover {
   transform: scale(1.2);
+}
+body main #hero .hero-phone {
+  display: inline;
+  margin-top: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+body main #hero .hero-phone:hover {
+  text-decoration: underline;
 }
 body main #hero {
   /* =========================================================
@@ -384,8 +394,8 @@ body main #hero {
 body main #studio i {
   color: #f5d77c;
   background: linear-gradient(45deg, #0b1d3a, #1e4d6e, #0E518A, #3a8ca3, #f5d77c);
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
