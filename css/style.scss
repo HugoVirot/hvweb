@@ -339,7 +339,7 @@ body {
       }
 
       .hero-phone {
-        display:inline;
+        display: inline;
         margin-top: 0.5rem;
         color: white;
         text-decoration: none;
@@ -725,31 +725,100 @@ body {
       .modal {
         height: auto;
       }
-
-      img {
-        width: 95%;
-        transform: scale(1);
-        transition: 0.4s;
-        z-index: 0;
-        filter: none;
+      .projet-card {
+        position: relative;
+        display: block;
+        width: 100%;
+        overflow: hidden;
         border: 2px solid $mainBlue;
         border-radius: 10px;
-        width: 100%;
-        /* Format portrait simulé + crop */
+        cursor: pointer;
 
-        @media screen and (max-width: 768px) {
-          aspect-ratio: 4/3;
+        img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 16 / 9;
           object-fit: cover;
           object-position: center;
-          display: block;
+          border: none;
+          border-radius: 0;
+          transform: scale(1);
+          transition: transform 0.4s ease;
 
-          &:hover {
-            transform: scale(1.1);
-            transition: 0.6s;
-            z-index: 10;
+          @media screen and (max-width: 768px) {
+            aspect-ratio: 4 / 3;
           }
         }
+
+        .projet-overlay {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          text-align: center;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+
+          h2,
+          span {
+            transform: translateY(12px);
+            transition: transform 0.4s ease;
+          }
+
+          h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+
+          span {
+            font-size: 0.95rem;
+          }
+        }
+
+        &:hover,
+        &:focus-visible {
+          img {
+            transform: scale(1.08);
+          }
+
+          .projet-overlay {
+            opacity: 1;
+
+            h2,
+            span {
+              transform: translateY(0);
+            }
+          }
+        }
+
+        &:focus-visible {
+          outline: 3px solid $mainBlue;
+          outline-offset: 4px;
+        }
       }
+
+      .mysql-icon {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+        border: none;
+      }
+
+      // .carousel-inner img {
+      //   @media screen and (max-width: 1024px) {
+      //     /* Format portrait simulé + crop */
+      //     aspect-ratio:  4/5; // ajuste si tu veux (2/3, 9/16, etc.)
+      //     object-fit: cover;
+      //     object-position: center;
+      //   }
+      // }
 
       h1 {
         justify-content: center !important;
@@ -816,97 +885,205 @@ body {
         font-size: 22px;
         width: 280px !important;
       }
+
+      // réduire croix en mobile 
+      .modal-header {
+        .btn-close {
+          flex-shrink: 0;
+        }
+
+        .modal-title {
+          overflow-wrap: break-word;
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        .modal-header .btn-close {
+          transform: scale(0.8);
+        }
+
+        .modal-header .modal-title {
+          font-size: 1.25rem;
+        }
+      }
     }
 
-    // à propos
+    // À propos
+
+    #imageInfos {
+      position: relative;
+      margin-bottom: 0;
+      overflow: visible;
+
+      > .row {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      // Photo
+      > .row > div:first-child {
+        width: 58.333333%;
+      }
+    }
 
     #photoProfil {
-      width: 70vw;
+      display: block;
+      width: 100%;
       height: auto;
       filter: contrast(1.2);
 
       @media screen and (max-width: 1024px) {
-        width: 100dvw;
+        width: 100%;
         height: 50vh;
-        /* Format portrait simulé + crop */
-        aspect-ratio: 3 / 4; // ajuste si tu veux (2/3, 9/16, etc.)
+        aspect-ratio: 3 / 4;
         object-fit: cover;
         object-position: center;
-        transform: scale(1.1);
+        transform: none;
       }
     }
 
     #profil {
-      position: absolute;
-      right: 3vw;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      padding: 2rem;
       border-radius: 20px;
-
-      @media screen and (max-width: 1500px) {
-        position: relative !important;
-        right: 0;
-        width: 100%;
-        border-radius: 0;
-      }
-
-      @media (min-width: 768px) {
-        .col-md-2 {
-          width: 120px;
-          flex: 0 0 120px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-
       color: white;
       background: $gradient;
 
       h3 {
-        font-size: 2.4em;
+        font-size: clamp(1.7rem, 2.2vw, 2.4rem);
       }
 
       p {
         color: white;
       }
+
+      // Icônes et textes : alignement horizontal dès 1200 px
+      .info-profil {
+        align-items: center;
+
+        .icone-profil {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0.5rem;
+        }
+
+        .texte-profil {
+          min-width: 0;
+        }
+      }
+
+      // Introduction et réseaux sociaux
+      #introProfil {
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      #reseauxProfil {
+        a {
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.3);
+            text-decoration: none;
+          }
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .info-profil {
+          > .icone-profil {
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+            margin-bottom: 0;
+          }
+
+          > .texte-profil {
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+          }
+        }
+
+        #introProfil {
+          flex-wrap: nowrap;
+
+          > div:first-child {
+            flex: 1 1 auto;
+            min-width: 0;
+          }
+
+          > #reseauxProfil {
+            flex: 0 0 auto;
+            width: auto;
+          }
+        }
+      }
     }
 
+    // Carrière
     #carriere {
       margin-left: 0;
       margin-right: 0;
 
+      #logosEntreprises {
+        min-width: 0;
+      }
+
       img {
-        border: none;
+        display: block;
         width: 4vw;
-        border-radius: 0px;
+        max-width: 100%;
+        height: auto;
+        border: none;
+        border-radius: 0;
         background-color: white;
+        object-fit: contain;
 
         @media screen and (max-width: 768px) {
           width: 25vw;
-          height: auto;
-          margin: 20px auto;
+          margin: 10px auto;
         }
       }
 
-      @media screen and (max-width: 768px) {
-        #logosEntreprises i {
-          transform: rotate(90deg);
-        }
+      .fleche-carriere {
+        flex-shrink: 0;
       }
 
       .zoom-img {
         transition: transform 0.8s ease;
 
         &:hover {
-          transform: scale(2);
+          transform: scale(1.5);
         }
       }
     }
 
+    // Statistiques
     #numbers {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      clear: both;
+      width: 100%;
+      margin: 2rem 0 0;
+      padding: 1rem 0 3rem;
       color: $mainYellow;
       font-size: 400%;
       font-family: "Alegreya Sans SC", sans-serif;
       font-weight: 500;
+
+      > div {
+        text-align: center;
+      }
 
       .number {
         text-shadow:
@@ -919,6 +1096,112 @@ body {
       p {
         font-size: 20px;
         font-family: "Exo 2";
+      }
+    }
+
+    // Superposition uniquement sur les très grands écrans
+    @media screen and (min-width: 1801px) {
+      #imageInfos {
+        padding-bottom: 2rem;
+
+        > .row {
+          position: relative;
+          min-height: 700px;
+        }
+
+        > .row > div:first-child {
+          width: 75%;
+        }
+      }
+
+      #profil {
+        position: absolute;
+        top: 3rem;
+        right: 3vw;
+        width: 42%;
+        max-width: 750px;
+        margin-top: 0;
+      }
+    }
+
+    // Écrans jusqu'à 1800 px : empilement pour éviter les chevauchements
+    @media screen and (max-width: 1800px) {
+      #imageInfos > .row {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #imageInfos > .row > div:first-child,
+      #imageInfos > .row > #profil {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      #profil {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: none;
+        margin-top: 1.5rem;
+      }
+    }
+
+    // Tablettes et mobiles
+    @media screen and (max-width: 1199.98px) {
+      #profil {
+        .info-profil {
+          > .icone-profil,
+          > .texte-profil {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          > .icone-profil {
+            margin-bottom: 0.75rem;
+          }
+        }
+
+        #introProfil {
+          > div {
+            width: 100%;
+          }
+        }
+      }
+
+      #carriere {
+        #logosEntreprises > div {
+          flex-direction: column !important;
+        }
+
+        img {
+          width: 25vw;
+          max-width: 180px;
+        }
+
+        .fleche-carriere {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    // Petits mobiles
+    @media screen and (max-width: 575.98px) {
+      #profil {
+        padding: 1.25rem;
+
+        h3 {
+          margin-left: 0 !important;
+        }
+
+        #introProfil p {
+          margin-left: 0 !important;
+        }
+      }
+
+      #numbers {
+        font-size: 300%;
       }
     }
 
